@@ -2,6 +2,58 @@
 
 These are issues I encounter from time to time when configuring systems. Rather than re-Google every time, I've collected some notes here so I can find them quickly when necessary.
 
+## apt-get
+
+#### Problem
+
+```shell
+E: Problem with MergeList /var/lib/apt/lists/[foo]
+E: The package lists or status file could not be parsed or opened.
+```
+
+This means the local package list has been corrupted.
+
+#### Solution
+
+```shell
+sudo rm /var/lib/apt/lists/* -vf
+sudo apt-get update
+```
+
+#### Alternate solution
+
+```shell
+sudo mv /var/lib/apt/lists /var/lib/apt/lists-old
+sudo mkdir -p /var/lib/apt/lists/partial
+sudo apt-get update
+```
+
+#### Alternate solution
+
+```shell
+sudo apt-get clean
+sudo apt-get update
+```
+
+#### References
+
+* http://askubuntu.com/questions/30072/how-do-i-fix-a-problem-with-mergelist-or-status-file-could-not-be-parsed-err
+
+## dpkg
+
+#### Problem
+
+```shell
+dpkg: status database area is locked by another process while trying to install
+```
+
+#### Solution
+
+```shell
+sudo rm /var/lib/dpkg/lock
+sudo dpkg --configure -a
+```
+
 ## X-windows
 
 #### Problem
@@ -50,43 +102,6 @@ Restart Xorg service. Procedure differs by OS and distro; see references or Goog
 * http://lists.freebsd.org/pipermail/freebsd-questions/2012-October/245323.html
 * http://www.unix.com/solaris/180317-starting-x-solaris-11-a.html
 * http://docs.oracle.com/cd/E23823_01/html/816-5166/svcadm-1m.html
-
-## apt-get
-
-#### Problem
-
-```shell
-E: Problem with MergeList /var/lib/apt/lists/[foo]
-E: The package lists or status file could not be parsed or opened.
-```
-
-This means the local package list has been corrupted.
-
-#### Solution
-
-```shell
-sudo rm /var/lib/apt/lists/* -vf
-sudo apt-get update
-```
-
-#### Alternate solution
-
-```shell
-sudo mv /var/lib/apt/lists /var/lib/apt/lists-old
-sudo mkdir -p /var/lib/apt/lists/partial
-sudo apt-get update
-```
-
-#### Alternate solution
-
-```shell
-sudo apt-get clean
-sudo apt-get update
-```
-
-#### References
-
-* http://askubuntu.com/questions/30072/how-do-i-fix-a-problem-with-mergelist-or-status-file-could-not-be-parsed-err
 
 ## yum
 
