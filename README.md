@@ -9,7 +9,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
 
 ## apt-get
 
-#### Problem
+#### Package list corrupted
 
 ```shell
 E: Problem with MergeList /var/lib/apt/lists/[foo]
