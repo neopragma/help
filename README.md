@@ -83,7 +83,7 @@ On the guest OS (running in the VM), create a mode for the resolution and refres
 gtf 1440 900 59.9
 ```
 
-Now create a mode using the result produced by gtf, add it to the table, and set the screen resolution. Note that VBOX0 is the identifier to use for VirtualBox. The identifier for your configuration may be different.
+Now create a mode using the result produced by gtf, add it to the table, and set the screen resolution. Note that VBOX0 is the identifier to use for VirtualBox. The identifier for your configuration may be different. I don't know the identifier for VMware, because I've never had this sort of problem using VMware (hint, hint).
 
 ```shell
 xrandr --newmode "1440x900_59.90"  106.29  1440 1520 1672 1904  900 901 904 932  -HSync +Vsync
