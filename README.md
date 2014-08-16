@@ -95,13 +95,13 @@ Restart Xorg service. Procedure differs by OS and distro; see references or Goog
 
 #### References
 
-* http://ubuntuforums.org/showthread.php?t=1112186
-* http://askubuntu.com/questions/1220/how-can-i-restart-x-server-from-the-command-line
-* http://forums.fedoraforum.org/showpost.php?p=1120206&postcount=2
-* http://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet
-* http://lists.freebsd.org/pipermail/freebsd-questions/2012-October/245323.html
-* http://www.unix.com/solaris/180317-starting-x-solaris-11-a.html
-* http://docs.oracle.com/cd/E23823_01/html/816-5166/svcadm-1m.html
+* Debian/Ubuntu: http://ubuntuforums.org/showthread.php?t=1112186
+* Debian/Ubuntu: http://askubuntu.com/questions/1220/how-can-i-restart-x-server-from-the-command-line
+* Fedora/RedHat: http://forums.fedoraforum.org/showpost.php?p=1120206&postcount=2
+* Fedora/RedHat: http://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet
+* FreeBSD: http://lists.freebsd.org/pipermail/freebsd-questions/2012-October/245323.html
+* Solaris: http://www.unix.com/solaris/180317-starting-x-solaris-11-a.html
+* Solaris: http://docs.oracle.com/cd/E23823_01/html/816-5166/svcadm-1m.html
 
 ## yum
 
