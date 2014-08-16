@@ -87,7 +87,7 @@ Now create a mode using the result produced by gtf, add it to the table, and set
 
 ```shell
 xrandr --newmode "1440x900_59.90"  106.29  1440 1520 1672 1904  900 901 904 932  -HSync +Vsync
-xrandr --addmode VGA 1440x900_59.90
+xrandr --addmode VBOX0 1440x900_59.90
 xrandr --output VBOX0 --mode 1440x900_59.90
 ```
 
