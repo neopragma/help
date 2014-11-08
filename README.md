@@ -6,6 +6,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Problem with MergeList...](#package-list-corrupted)
 * [dpkg](#dpkg)
     * [Status database area locked...](#status-database-area-locked)
+* [OS X](#osx)
+    * [NTFS filesystem is read-only](#ntfs-read-only)
 * [X-windows](#x-windows)
     * [Wrong screen resolution](#wrong-screen-resolution)
 * [yum](#yum)
@@ -61,6 +63,38 @@ dpkg: status database area is locked by another process while trying to install
 ```shell
 sudo rm /var/lib/dpkg/lock
 sudo dpkg --configure -a
+```
+
+## OS X
+
+#### NTFS filesystem read-only
+
+OS X mounts external NTFS drive as read-only. 
+
+#### Solution
+
+Connect the NTFS drive to the Mac. Open Terminal and find the UUID of the drive:
+
+```shell
+diskutil info /Volumes/DRIVENAME | grep UUID
+```
+
+Add a line to ```/etc/fstab``` to define the drive as read-write:
+
+```shell
+sudo echo "UUID=ENTER_UUID_HERE none ntfs rw,auto,nobrowse" >> /etc/fstab
+```
+
+An icon for the drive will not appear on the Desktop automatically. You can open a Finder window like this:
+
+```shell
+open /Volumes
+```
+
+You can define a symlink for a Desktop icon like this:
+
+```Shell
+sudo ln -s /Volumes/DRIVENAME ~/Desktop/DRIVENAME
 ```
 
 ## X-windows
