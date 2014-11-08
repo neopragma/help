@@ -6,8 +6,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Problem with MergeList...](#package-list-corrupted)
 * [dpkg](#dpkg)
     * [Status database area locked...](#status-database-area-locked)
-* [OS X](#osx)
-    * [NTFS filesystem is read-only](#ntfs-read-only)
+* [OSX](#osx)
+    * [NTFS filesystem is read-only](#ntfs-filesystem-readonly)
 * [X-windows](#x-windows)
     * [Wrong screen resolution](#wrong-screen-resolution)
 * [yum](#yum)
@@ -65,9 +65,9 @@ sudo rm /var/lib/dpkg/lock
 sudo dpkg --configure -a
 ```
 
-## OS X
+## OSX
 
-#### NTFS filesystem read-only
+#### NTFS filesystem readonly
 
 OS X mounts external NTFS drive as read-only. 
 
