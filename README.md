@@ -2,6 +2,8 @@
 
 These are issues I encounter from time to time when configuring systems. Rather than re-Google every time, I've collected some notes here so I can find them quickly when necessary.
 
+* [apport](#apport)
+    * [Disable bogus crash reports](#apport-disable)
 * [apt-get](#apt-get)
     * [Problem with MergeList...](#package-list-corrupted)
 * [dpkg](#dpkg)
@@ -12,6 +14,14 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Wrong screen resolution](#wrong-screen-resolution)
 * [yum](#yum)
     * [Yum lock is held by another process](#yum-lock-is-held)
+
+## apport
+
+### apport-disable
+
+Edit /etc/default/apport
+
+Change enabled=1 to enabled=0
 
 ## apt-get
 
