@@ -10,6 +10,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Status database area locked...](#status-database-area-locked)
 * [OSX](#osx)
     * [NTFS filesystem is read-only](#ntfs-filesystem-readonly)
+    * [Make an app out of a shell script](#make-an-app-out-of-a-shell-script)
 * [Ubuntu](#ubuntu)
     * [Determine the Ubuntu version](#determine-the-ubuntu-version)
     * [Determine the types of filesystems](#determine-the-types-of-filesystems)
@@ -110,6 +111,15 @@ You can define a symlink for a Desktop icon like this:
 ```Shell
 sudo ln -s /Volumes/DRIVENAME ~/Desktop/DRIVENAME
 ```
+
+#### Make an app out of a shell script
+
+1. Write the shell script.
+2. In Automator, choose ```run shell script``` and write a one-liner to execute the shell script.
+3. Choose ```File``` -> ```Convert to...```, then choose ```Application```.
+4. Find a suitable icon and make an ```.icns``` file with it.
+5. Right-click on the app file and choose ```Get Info```.
+6. Paste the icon over the small icon image located in the upper left-hand corner of the ```Info``` dialog.
 
 ## X-windows
 
