@@ -12,6 +12,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [NTFS filesystem is read-only](#ntfs-filesystem-readonly)
 * [Ubuntu](#ubuntu)
     * [Determine the Ubuntu version](#determine-the-ubuntu-version)
+    * [Determine the types of filesystems](#determine-the-types-of-filesystems)
+    * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
 * [X-windows](#x-windows)
     * [Wrong screen resolution](#wrong-screen-resolution)
 * [yum](#yum)
@@ -164,6 +166,18 @@ Restart Xorg service. Procedure differs by OS and distro; see references or Goog
 
 ```shell
 lsb_release -a
+```
+
+#### Determine the types of filesystems
+
+```shell
+df -T
+```
+
+#### NTFS filesystem is read-only Ubuntu
+
+```
+sudo apt-get install ntfs-3g
 ```
 
 ## yum
