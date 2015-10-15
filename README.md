@@ -10,6 +10,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Status database area locked...](#status-database-area-locked)
 * [OSX](#osx)
     * [NTFS filesystem is read-only](#ntfs-filesystem-readonly)
+* [Ubuntu](#ubuntu)
+    * [Determine the Ubuntu version](#determine-the-ubuntu-version)
 * [X-windows](#x-windows)
     * [Wrong screen resolution](#wrong-screen-resolution)
 * [yum](#yum)
@@ -155,6 +157,14 @@ Restart Xorg service. Procedure differs by OS and distro; see references or Goog
 * FreeBSD: http://lists.freebsd.org/pipermail/freebsd-questions/2012-October/245323.html
 * Solaris: http://www.unix.com/solaris/180317-starting-x-solaris-11-a.html
 * Solaris: http://docs.oracle.com/cd/E23823_01/html/816-5166/svcadm-1m.html
+
+## Ubuntu
+
+#### Determine the Ubuntu version
+
+```shell
+lsb_release -a
+```
 
 ## yum
 
