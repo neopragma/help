@@ -15,6 +15,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Determine the Ubuntu version](#determine-the-ubuntu-version)
     * [Determine the types of filesystems](#determine-the-types-of-filesystems)
     * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
+* [Windows](#windows)
+    * [Equivalent of touch command](#equivalent-of-touch-command)
 * [X-windows](#x-windows)
     * [Wrong screen resolution](#wrong-screen-resolution)
 * [yum](#yum)
@@ -120,6 +122,14 @@ sudo ln -s /Volumes/DRIVENAME ~/Desktop/DRIVENAME
 4. Find a suitable icon and make an ```.icns``` file with it.
 5. Right-click on the app file and choose ```Get Info```.
 6. Paste the icon over the small icon image located in the upper left-hand corner of the ```Info``` dialog.
+
+## Windoews
+
+#### Equivalent of touch command
+
+```shell
+type nul > filename & copy filename +,,
+```
 
 ## X-windows
 
