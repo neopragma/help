@@ -123,7 +123,7 @@ sudo ln -s /Volumes/DRIVENAME ~/Desktop/DRIVENAME
 5. Right-click on the app file and choose ```Get Info```.
 6. Paste the icon over the small icon image located in the upper left-hand corner of the ```Info``` dialog.
 
-## Windoews
+## Windows
 
 #### Equivalent of touch command
 
@@ -151,7 +151,10 @@ On the guest OS (running in the VM), create a mode for the resolution and refres
 gtf 1440 900 59.9
 ```
 
-Now create a mode using the result produced by gtf, add it to the table, and set the screen resolution. Note that VBOX0 is the identifier to use for VirtualBox. The identifier for your configuration may be different. I don't know the identifier for VMware, because I've never had this sort of problem using VMware (hint, hint).
+Now create a mode using the result produced by gtf, add it to the table, and set the screen resolution. 
+
+- The identifier for VirtualBox is VBOX0
+- The identifier for VMware is Virtual1
 
 ```shell
 xrandr --newmode "1440x900_59.90"  106.29  1440 1520 1672 1904  900 901 904 932  -HSync +Vsync
