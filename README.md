@@ -8,6 +8,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Problem with MergeList...](#package-list-corrupted)
 * [dpkg](#dpkg)
     * [Status database area locked...](#status-database-area-locked)
+* [gnome](#gnome)
+    * [disable overlay scrollbars](#disable-overlay-scrollbars)
 * [OSX](#osx)
     * [NTFS filesystem is read-only](#ntfs-filesystem-readonly)
     * [Make an app out of a shell script](#make-an-app-out-of-a-shell-script)
@@ -80,6 +82,14 @@ dpkg: status database area is locked by another process while trying to install
 ```shell
 sudo rm /var/lib/dpkg/lock
 sudo dpkg --configure -a
+```
+
+## gnome
+
+#### Disable overlay scrollbars
+
+```shell
+gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false
 ```
 
 ## OSX
