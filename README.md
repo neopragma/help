@@ -88,6 +88,12 @@ sudo dpkg --configure -a
 
 #### Disable overlay scrollbars
 
+#### Problem
+
+Those pesky overlay scrollbars that are enabled by default in Ubuntu prevent you from grabbing the side of a window to resize it.
+
+#### Solution
+
 ```shell
 gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false
 ```
