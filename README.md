@@ -16,6 +16,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
 * [Ubuntu](#ubuntu)
     * [Determine the Ubuntu version](#determine-the-ubuntu-version)
     * [Determine the types of filesystems](#determine-the-types-of-filesystems)
+    * [HP printer drivers](#hp-printer-drivers)
     * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
 * [Windows](#windows)
     * [Equivalent of touch command](#equivalent-of-touch-command)
@@ -211,6 +212,20 @@ lsb_release -a
 
 ```shell
 df -T
+```
+
+#### HP printer drivers
+
+Find out what version of HPLIP is installed:
+
+```shell
+dpkg -l hplip
+```
+
+Install HPLIP
+
+```shell
+sudo apt-get install hplip
 ```
 
 #### NTFS filesystem is read-only Ubuntu
