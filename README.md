@@ -11,6 +11,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
 * [gnome](#gnome)
     * [disable overlay scrollbars](#disable-overlay-scrollbars)
 * [OSX](#osx)
+    * [HP printer drivers for OSX](#hp-printer-drivers-for-osx)
     * [NTFS filesystem is read-only](#ntfs-filesystem-readonly)
     * [Make an app out of a shell script](#make-an-app-out-of-a-shell-script)
 * [Ubuntu](#ubuntu)
@@ -101,6 +102,16 @@ gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false
 ```
 
 ## OSX
+
+#### HP printer drivers for OSX
+
+Go to http://support.hp.com/us-en/drivers
+
+Enter the printer model name/number.
+
+Choose 'Apple OS X' as the operating system and select the version number.
+
+It will take you to a download page. The file you download will be a .zip archive containing an installer.
 
 #### NTFS filesystem readonly
 
