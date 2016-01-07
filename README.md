@@ -20,6 +20,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
 * [Windows](#windows)
     * [Equivalent of touch command](#equivalent-of-touch-command)
+    * [HP printer drivers for Windows](#hp-printer-drivers-for-windows)
 * [X-windows](#x-windows)
     * [Wrong screen resolution](#wrong-screen-resolution)
 * [yum](#yum)
@@ -147,6 +148,15 @@ sudo ln -s /Volumes/DRIVENAME ~/Desktop/DRIVENAME
 ```shell
 type nul > filename & copy filename +,,
 ```
+#### HP printer drivers for Windows
+
+Go to http://support.hp.com/us-en/drivers
+
+Enter the printer model name/number.
+
+Choose 'Microsoft Windows' as the operating system and select the version number.
+
+It will take you to a download page. The file you download will be an .exe you can run to install the driver.
 
 ## X-windows
 
