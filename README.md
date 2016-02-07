@@ -15,6 +15,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [NTFS filesystem is read-only](#ntfs-filesystem-readonly)
     * [Make an app out of a shell script](#make-an-app-out-of-a-shell-script)
 * [Ubuntu](#ubuntu)
+    * [Application menu display problem](#application-menu-display-problem)
     * [Determine the Ubuntu version](#determine-the-ubuntu-version)
     * [Determine the types of filesystems](#determine-the-types-of-filesystems)
     * [HP printer drivers](#hp-printer-drivers)
@@ -152,6 +153,48 @@ sudo ln -s /Volumes/DRIVENAME ~/Desktop/DRIVENAME
 5. Right-click on the app file and choose ```Get Info```.
 6. Paste the icon over the small icon image located in the upper left-hand corner of the ```Info``` dialog.
 
+## Ubuntu
+
+#### Application menu display problem
+
+For some applications, menus don't show up on Ubuntu (I think 13.04 onward) and the application window appears to be shoved up into the top of the screen. To fix this, set environment variable ```UBUNTU_MENUPROXY``` to 0 or to nothing. You can do it on the command line or in a ```.desktop``` file.
+
+```shell
+UBUNTU_MENUPROXY=0 appname
+```
+
+#### Determine the Ubuntu version
+
+```shell
+lsb_release -a
+```
+
+#### Determine the types of filesystems
+
+```shell
+df -T
+```
+
+#### HP printer drivers
+
+Find out what version of HPLIP is installed:
+
+```shell
+dpkg -l hplip
+```
+
+Install HPLIP
+
+```shell
+sudo apt-get install hplip
+```
+
+#### NTFS filesystem is read-only Ubuntu
+
+```
+sudo apt-get install ntfs-3g
+```
+
 ## Windows
 
 #### Equivalent of touch command
@@ -220,40 +263,6 @@ Restart Xorg service. Procedure differs by OS and distro; see references or Goog
 * FreeBSD: http://lists.freebsd.org/pipermail/freebsd-questions/2012-October/245323.html
 * Solaris: http://www.unix.com/solaris/180317-starting-x-solaris-11-a.html
 * Solaris: http://docs.oracle.com/cd/E23823_01/html/816-5166/svcadm-1m.html
-
-## Ubuntu
-
-#### Determine the Ubuntu version
-
-```shell
-lsb_release -a
-```
-
-#### Determine the types of filesystems
-
-```shell
-df -T
-```
-
-#### HP printer drivers
-
-Find out what version of HPLIP is installed:
-
-```shell
-dpkg -l hplip
-```
-
-Install HPLIP
-
-```shell
-sudo apt-get install hplip
-```
-
-#### NTFS filesystem is read-only Ubuntu
-
-```
-sudo apt-get install ntfs-3g
-```
 
 ## yum
 
