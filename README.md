@@ -23,6 +23,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
 * [Windows](#windows)
     * [Equivalent of touch command](#equivalent-of-touch-command)
     * [HP printer drivers for Windows](#hp-printer-drivers-for-windows)
+    * [Open command line elevated](#command-line-elevated)
 * [X-windows](#x-windows)
     * [Wrong screen resolution](#wrong-screen-resolution)
 * [yum](#yum)
@@ -211,6 +212,24 @@ Enter the printer model name/number.
 Choose 'Microsoft Windows' as the operating system and select the version number.
 
 It will take you to a download page. The file you download will be an .exe you can run to install the driver.
+
+#### Command line elevated
+
+Open a standard command-line window
+
+Enter
+
+```shell
+powershell
+```
+
+At the PS prompt, enter
+
+```shell
+Start-Process cmd -Verb RunAs
+```
+
+A second command-line window opens running with Administrator privileges.
 
 ## X-windows
 
