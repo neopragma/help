@@ -14,6 +14,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [HP printer drivers for OSX](#hp-printer-drivers-for-osx)
     * [NTFS filesystem is read-only](#ntfs-filesystem-readonly)
     * [Make an app out of a shell script](#make-an-app-out-of-a-shell-script)
+    * [Remove .DS_Store files recursively](#remove-ds_store-files-recursively)
 * [Ubuntu](#ubuntu)
     * [Application menu display problem](#application-menu-display-problem)
     * [Determine the Ubuntu version](#determine-the-ubuntu-version)
@@ -153,6 +154,10 @@ sudo ln -s /Volumes/DRIVENAME ~/Desktop/DRIVENAME
 4. Find a suitable icon and make an ```.icns``` file with it.
 5. Right-click on the app file and choose ```Get Info```.
 6. Paste the icon over the small icon image located in the upper left-hand corner of the ```Info``` dialog.
+
+#### Remove .DS_Store files recursively
+
+find . -name ‘*.DS_Store’ -type f -delete
 
 ## Ubuntu
 
