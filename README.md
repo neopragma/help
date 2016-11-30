@@ -15,6 +15,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [NTFS filesystem is read-only](#ntfs-filesystem-readonly)
     * [Make an app out of a shell script](#make-an-app-out-of-a-shell-script)
     * [Remove .DS_Store files recursively](#remove-ds_store-files-recursively)
+    * [Replace strings in files recursively](#replace-strings-in-files-recursively)
 * [Ubuntu](#ubuntu)
     * [Application menu display problem](#application-menu-display-problem)
     * [Determine the Ubuntu version](#determine-the-ubuntu-version)
@@ -157,7 +158,17 @@ sudo ln -s /Volumes/DRIVENAME ~/Desktop/DRIVENAME
 
 #### Remove .DS_Store files recursively
 
+```shell
 find . -name ‘*.DS_Store’ -type f -delete
+```
+
+#### Replace strings in files recursively
+
+```shell
+export LC_CTYPE=C
+export LANG=C
+find . *.html -type f -print0 | xargs -0 sed -i "" 's/Software Craftsperson/Solution Developer/g'
+```
 
 ## Ubuntu
 
