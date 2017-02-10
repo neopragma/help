@@ -21,6 +21,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Determine the Ubuntu version](#determine-the-ubuntu-version)
     * [Determine the types of filesystems](#determine-the-types-of-filesystems)
     * [HP printer drivers](#hp-printer-drivers)
+    * [Format USB stick NTFS for Ubuntu](#format-usb-stick-ntfs-for-ubuntu)
     * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
 * [Windows](#windows)
     * [Equivalent of touch command](#equivalent-of-touch-command)
@@ -205,6 +206,21 @@ Install HPLIP
 ```shell
 sudo apt-get install hplip
 ```
+
+#### Format USB stick NTFS for Ubuntu
+
+Insert the USB stick. If it's a new one that's preformatted FAT32, Ubuntu will add it to the device list but not mount it.
+
+Run ```dmesg``` or ```df -h``` and find the device name. It will be something like ```sdb1```.
+
+Now run
+
+```shell
+sudo mkfs.ntfs /dev/sdb1
+```
+
+Now the USB stick will be accessible with ```ntfs-3g```.
+
 
 #### NTFS filesystem is read-only Ubuntu
 
