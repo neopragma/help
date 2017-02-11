@@ -4,7 +4,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
 
 * [apport](#apport)
     * [Disable bogus crash reports](#apport-disable)
-* [apt-get](#apt-get)
+* [apt](#apt)
     * [Problem with MergeList...](#package-list-corrupted)
 * [dpkg](#dpkg)
     * [Status database area locked...](#status-database-area-locked)
@@ -40,7 +40,7 @@ Edit /etc/default/apport
 
 Change enabled=1 to enabled=0
 
-## apt-get
+## apt
 
 #### Package list corrupted
 
