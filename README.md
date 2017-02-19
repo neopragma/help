@@ -213,13 +213,13 @@ When you want the graphical interface:
 sudo service lightdm start
 ```
 
-It will default to the minimum screen resolution available on the connected display device. To see what display resolutions are available:
+It will default to the screen resolution you last saved. To see what display resolutions are available on the connected display device:
 
 ```shell
 xrandr
 ```
 
-To set the display resolution appropriately for the display device you're using:
+To set the display resolution appropriately for the connected display device:
 
 ```shell
 xrandr --output `xrandr | grep " connected"|cut -f1 -d" "` --mode 1920x1080
