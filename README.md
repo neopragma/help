@@ -18,6 +18,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Replace strings in files recursively](#replace-strings-in-files-recursively)
 * [Ubuntu](#ubuntu)
     * [Application menu display problem](#application-menu-display-problem)
+    * [Boot to command line](#boot-to-command-line)
     * [Determine the Ubuntu version](#determine-the-ubuntu-version)
     * [Determine the types of filesystems](#determine-the-types-of-filesystems)
     * [HP printer drivers](#hp-printer-drivers)
@@ -179,6 +180,49 @@ For some applications, menus don't show up on Ubuntu (I think 13.04 onward) and 
 
 ```shell
 UBUNTU_MENUPROXY=0 appname
+```
+
+### Boot to command line
+
+Set up Ubuntu 15.x and later to boot to a command line by default, edit ```/etc/default/grub```
+
+comment the line
+```shell
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+```
+
+Add lines:
+
+```shell 
+GRUB_CMDLINE_LINUX="text"
+GRUB_CMDLINE_LINUX_DEFAULT="text"
+```
+
+Save the file and run the following commands:
+
+```shell
+sudo update-grub
+sudo systemctl enable multi-user.target --force
+sudo systemctl set-default multi-user.target
+sudo reboot
+```
+
+When you want the graphical interface:
+
+```shell
+sudo service lightdm start
+```
+
+It will default to the minimum screen resolution available on the connected display device. To see what display resolutions are available:
+
+```shell
+xrandr
+```
+
+To set the display resolution appropriately for the display device you're using:
+
+```shell
+xrandr --output `xrandr | grep " connected"|cut -f1 -d" "` --mode 1920x1080
 ```
 
 #### Determine the Ubuntu version
