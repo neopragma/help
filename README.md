@@ -11,6 +11,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
 * [gnome](#gnome)
     * [disable overlay scrollbars](#disable-overlay-scrollbars)
 * [OSX](#osx)
+    * [Hidden files](#hidden-files)
     * [HP printer drivers for OSX](#hp-printer-drivers-for-osx)
     * [NTFS filesystem is read-only](#ntfs-filesystem-readonly)
     * [Make an app out of a shell script](#make-an-app-out-of-a-shell-script)
@@ -108,6 +109,16 @@ gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false
 ```
 
 ## OSX
+
+#### Hidden files
+
+Apple is very serious about keeping hidden files hidden. OSX is far less user-friendly in this regard than any other \*nix system. Do this:
+
+```shell
+defaults write -g AppleShowAllFiles -bool true
+```
+
+and then re-launch any applications you would like to show hidden files in the Open dialog.
 
 #### HP printer drivers for OSX
 
