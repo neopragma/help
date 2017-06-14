@@ -11,6 +11,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
 * [gnome](#gnome)
     * [disable overlay scrollbars](#disable-overlay-scrollbars)
 * [OSX](#osx)
+    * [Disable writing DS_Store files on network volumes](#disable-writing-ds_store-files-on-network-volumes)
     * [Hidden files](#hidden-files)
     * [HP printer drivers for OSX](#hp-printer-drivers-for-osx)
     * [NTFS filesystem is read-only](#ntfs-filesystem-readonly)
@@ -109,6 +110,12 @@ gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false
 ```
 
 ## OSX
+
+#### Disable writing DS_Store files on network volumes
+
+```shell
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+```
 
 #### Hidden files
 
