@@ -17,6 +17,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [NTFS filesystem is read-only](#ntfs-filesystem-readonly)
     * [Make an app out of a shell script](#make-an-app-out-of-a-shell-script)
     * [Remove .DS_Store files recursively](#remove-ds_store-files-recursively)
+    * [Remove all .DS_Store files system-wide](#remove-all-ds_store-files-system-wide)
     * [Replace strings in files recursively](#replace-strings-in-files-recursively)
 * [Ubuntu](#ubuntu)
     * [Application menu display problem](#application-menu-display-problem)
@@ -111,7 +112,7 @@ gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false
 
 ## OSX
 
-#### Disable writing DS_Store files on network volumes
+#### Disable writing .DS_Store files on network volumes
 
 ```shell
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
@@ -181,6 +182,13 @@ sudo ln -s /Volumes/DRIVENAME ~/Desktop/DRIVENAME
 ```shell
 find . -name ‘*.DS_Store’ -type f -delete
 ```
+
+#### Remove all .DS_Store files system-wide
+
+```shell
+sudo find / -name ".DS_Store" -depth -exec rm {} \;
+```
+
 
 #### Replace strings in files recursively
 
