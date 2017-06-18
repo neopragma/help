@@ -27,6 +27,9 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [HP printer drivers](#hp-printer-drivers)
     * [Format USB stick NTFS for Ubuntu](#format-usb-stick-ntfs-for-ubuntu)
     * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
+* [VisualStudio](#visualstudio)
+    * [Nuget executable not found](#nuget-executable-not-found)
+    * [NUnit tests not discovered](#nunit-tests-not-discovered)
 * [Windows](#windows)
     * [Equivalent of touch command](#equivalent-of-touch-command)
     * [HP printer drivers for Windows](#hp-printer-drivers-for-windows)
@@ -297,6 +300,25 @@ Now the USB stick will be accessible with ```ntfs-3g```.
 ```
 sudo apt-get install ntfs-3g
 ```
+
+
+## VisualStudio
+
+#### Nuget executable not found
+
+VisualStudio can't find a nuget.exe when it tries to build a project.
+
+Solution: Download a nuget.exe from https://dist.nuget.org/index.html
+
+#### NUnit tests not discovered
+
+When you run tests, it says there are no NUnit tests to run.
+
+Solution: 
+* In VisualStudio, go to Tools => Extensions and Updates
+* Search for "nunit"
+* Look for the NUnit 3 Test Adapter and install it
+
 
 ## Windows
 
