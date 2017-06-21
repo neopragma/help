@@ -31,6 +31,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Nuget executable not found](#nuget-executable-not-found)
     * [NUnit tests not discovered](#nunit-tests-not-discovered)
 * [Windows](#windows)
+    * [Equivalent of kill command](#equivalent-of-kill-command)
     * [Equivalent of touch command](#equivalent-of-touch-command)
     * [HP printer drivers for Windows](#hp-printer-drivers-for-windows)
     * [Open command line elevated](#command-line-elevated)
@@ -321,6 +322,27 @@ Solution:
 
 
 ## Windows
+
+#### Equivalent of kill command
+
+Find out what command options are available:
+
+```shell
+taskkill /?
+```
+
+Kill a process by name:
+
+```shell
+taskkill /im myprocess.exe /f
+```
+
+Kill a process by PID:
+
+```shell
+taskkill /pid 1234 /f
+```
+
 
 #### Equivalent of touch command
 
