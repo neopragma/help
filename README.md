@@ -19,6 +19,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Remove .DS_Store files recursively](#remove-ds_store-files-recursively)
     * [Remove all .DS_Store files system-wide](#remove-all-ds_store-files-system-wide)
     * [Replace strings in files recursively](#replace-strings-in-files-recursively)
+* [rvm](#rvm)
+    * [rvm install gets permission denied errors](#rvm-install-gets-permission-denied-errors)
 * [Ubuntu](#ubuntu)
     * [Application menu display problem](#application-menu-display-problem)
     * [Boot to command line](#boot-to-command-line)
@@ -201,6 +203,15 @@ export LC_CTYPE=C
 export LANG=C
 find . *.html -type f -print0 | xargs -0 sed -i "" 's/Software Craftsperson/Solution Developer/g'
 ```
+
+## rvm
+
+### rvm install gets permission denied errors
+
+This happens on Ubuntu using apt. Usually logging out and back in again clears it up.
+
+If that doesn't work, run ```sudo apt update``` and look for any errors (even if unrelated to rvm). Remove any offending entries from ```/etc/apt/sources.list``` and files under ```/etc/apt/sources.list.d```.
+
 
 ## Ubuntu
 
