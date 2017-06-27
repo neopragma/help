@@ -108,7 +108,9 @@ sudo dpkg --configure -a
 
 #### stop tracking files
 
-Update ```.gitignore``` and then:
+Symptom: ```git status``` shows files you don't want to track.
+
+Solution: Update ```.gitignore``` with filenames to ignore and then:
 
 ```shell
 git rm -r --cached .
