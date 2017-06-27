@@ -8,6 +8,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Problem with MergeList...](#package-list-corrupted)
 * [dpkg](#dpkg)
     * [Status database area locked...](#status-database-area-locked)
+* [git] (#git)
+    * [stop tracking files] (#stop-tracking-files)
 * [gnome](#gnome)
     * [disable overlay scrollbars](#disable-overlay-scrollbars)
 * [OSX](#osx)
@@ -100,6 +102,18 @@ dpkg: status database area is locked by another process while trying to install
 ```shell
 sudo rm /var/lib/dpkg/lock
 sudo dpkg --configure -a
+```
+
+## git
+
+#### stop tracking files
+
+Update ```.gitignore``` and then:
+
+```shell
+git rm -r --cached .
+git add .
+git commit -m "Cleaned up cached untracked files"
 ```
 
 ## gnome
