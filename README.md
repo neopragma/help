@@ -21,6 +21,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Remove .DS_Store files recursively](#remove-ds_store-files-recursively)
     * [Remove all .DS_Store files system-wide](#remove-all-ds_store-files-system-wide)
     * [Replace strings in files recursively](#replace-strings-in-files-recursively)
+* [PostgreSQL](postgresql)
+    * [Install PostgreSQL on Ubuntu](install-postgresql-on-ubuntu)
 * [rvm](#rvm)
     * [rvm install gets permission denied errors](#rvm-install-gets-permission-denied-errors)
 * [Ubuntu](#ubuntu)
@@ -218,6 +220,21 @@ sudo find / -name ".DS_Store" -depth -exec rm {} \;
 export LC_CTYPE=C
 export LANG=C
 find . *.html -type f -print0 | xargs -0 sed -i "" 's/Software Craftsperson/Solution Developer/g'
+```
+
+## PostgreSQL
+
+#### Install PostgreSQL on Ubuntu
+
+The basic installation instructions here are useful: https://www.howtoforge.com/tutorial/ubuntu-postgresql-installation/
+
+Then do this:
+
+```shell
+sudo cp /etc/postgresql/*/main/postgresql.conf ./postgresql.conf.orig
+sudo cp /etc/postgresql/*/main/pg_hba.conf ./pg_hba.conf.orig
+sudo cp ./pg_hba.conf /etc/postgresql/*/main
+sudo sed -i "/#listen_addresses/c\listen_addresses = \'*\'" /etc/postgresql/*/main/postgresql.conf
 ```
 
 ## rvm
