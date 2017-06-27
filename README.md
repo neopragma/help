@@ -8,7 +8,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Problem with MergeList...](#package-list-corrupted)
 * [dpkg](#dpkg)
     * [Status database area locked...](#status-database-area-locked)
-* [git] (#git)
+* [git](#git)
     * [stop tracking files] (#stop-tracking-files)
 * [gnome](#gnome)
     * [disable overlay scrollbars](#disable-overlay-scrollbars)
