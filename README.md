@@ -9,7 +9,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
 * [dpkg](#dpkg)
     * [Status database area locked...](#status-database-area-locked)
 * [git](#git)
-    * [stop tracking files] (#stop-tracking-files)
+    * [stop tracking files](#stop-tracking-files)
 * [gnome](#gnome)
     * [disable overlay scrollbars](#disable-overlay-scrollbars)
 * [OSX](#osx)
