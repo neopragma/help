@@ -8,6 +8,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Problem with MergeList...](#package-list-corrupted)
 * [dpkg](#dpkg)
     * [Status database area locked...](#status-database-area-locked)
+* [diff](#diff)
+    * [diff zipped files](#diff-zipped-files)
 * [git](#git)
     * [stop tracking files](#stop-tracking-files)
 * [gnome](#gnome)
@@ -105,6 +107,18 @@ dpkg: status database area is locked by another process while trying to install
 sudo rm /var/lib/dpkg/lock
 sudo dpkg --configure -a
 ```
+
+## diff
+
+#### diff zipped files
+
+Compare two zipped files without decompressing them. 
+
+```shell
+diff -y <(unzip -l foo.zip) <(unzip -l bar.zip) --suppress-common-lines
+```
+
+Reference: https://stackoverflow.com/questions/35581274/diff-files-inside-of-zip-without-extracting-it
 
 ## git
 
