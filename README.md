@@ -112,7 +112,7 @@ sudo dpkg --configure -a
 
 #### diff zipped files
 
-Compare two zipped files without decompressing them. 
+Compare the entry names of two zipped files without decompressing them. 
 
 ```shell
 diff -y <(unzip -l foo.zip) <(unzip -l bar.zip) --suppress-common-lines
