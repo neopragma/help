@@ -35,6 +35,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [HP printer drivers](#hp-printer-drivers)
     * [Format USB stick NTFS for Ubuntu](#format-usb-stick-ntfs-for-ubuntu)
     * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
+    * [PostgreSQL install](#postgresql-install-ubuntu)
 * [VisualStudio](#visualstudio)
     * [Nuget executable not found](#nuget-executable-not-found)
     * [NUnit tests not discovered](#nunit-tests-not-discovered)
@@ -179,6 +180,17 @@ It will take you to a download page. The file you download will be a .zip archiv
 #### NTFS filesystem readonly
 
 OS X mounts external NTFS drive as read-only. 
+
+#### PostgreSQL install ubuntu
+
+Install PostgreSQL package and ```pg``` gem.
+
+```shell
+sudo apt-get install postgresql
+sudo apt-get install libpq-dev
+```
+The ```pg``` gem can be dependent on the PostgreSQL version. See https://stackoverflow.com/questions/14913572/cant-install-pg-gem.
+
 
 #### Solution
 
