@@ -40,6 +40,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
 * [VisualStudio](#visualstudio)
     * [Nuget executable not found](#nuget-executable-not-found)
     * [NUnit tests not discovered](#nunit-tests-not-discovered)
+* [VMWare Fusion](#vmware-fusion)
+    * [Fusion 10 does not start correctly on OSX 10.12](#fusion-10-does-not-start-correctly-on-osx-10-12)
 * [Windows](#windows)
     * [Equivalent of kill command](#equivalent-of-kill-command)
     * [Equivalent of touch command](#equivalent-of-touch-command)
@@ -397,6 +399,17 @@ Solution:
 * In VisualStudio, go to Tools => Extensions and Updates
 * Search for "nunit"
 * Look for the NUnit 3 Test Adapter and install it
+
+
+## VMWare Fusion
+
+#### Fusion 10 does not start correctly on OSX 10.12](#fusion-10-does-not-start-correctly-on-osx-10-12)
+
+VMWare Fusion 10 starts in a corrupted state when opened via clicking its icon. Workaround is to start it from a command line:
+
+```
+/Applications/VMware\ Fusion.app/Contents/MacOS/VMware\ Fusion
+```
 
 
 ## Windows
