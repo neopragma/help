@@ -41,7 +41,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Nuget executable not found](#nuget-executable-not-found)
     * [NUnit tests not discovered](#nunit-tests-not-discovered)
 * [VMWare Fusion](#vmware-fusion)
-    * [Fusion 10 does not start correctly on OSX 10.12](#fusion-10-does-not-start-correctly-on-osx-10-12)
+    * [Fusion 10 does not start correctly on OSX 10.12](#fusion-10-does-not-start-correctly-on-osx-1012)
 * [Windows](#windows)
     * [Equivalent of kill command](#equivalent-of-kill-command)
     * [Equivalent of touch command](#equivalent-of-touch-command)
