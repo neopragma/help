@@ -17,6 +17,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [disable overlay scrollbars](#disable-overlay-scrollbars)
 * [OSX](#osx)
     * [Disable writing DS_Store files on network volumes](#disable-writing-ds_store-files-on-network-volumes)
+    * [File is in use by macos and cannot be opened](#file-is-in-use)
     * [Hidden files](#hidden-files)
     * [HP printer drivers for OSX](#hp-printer-drivers-for-osx)
     * [NTFS filesystem is read-only](#ntfs-filesystem-readonly)
@@ -165,6 +166,20 @@ gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false
 
 ```shell
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+```
+
+#### File is in use
+
+Creator and type attributes are modified by Finder during a file copy operation. To reset:
+
+```shell
+SetFile -c "" -t "" path/to/file
+```
+
+If the SetFile command is not installed, do this:
+
+```shell
+xcode-select --install
 ```
 
 #### Hidden files
