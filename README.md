@@ -38,6 +38,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Format USB stick NTFS for Ubuntu](#format-usb-stick-ntfs-for-ubuntu)
     * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
     * [PostgreSQL install](#postgresql-install-ubuntu)
+* [UNIX/Linux](#unixlinux)
+    * [Replace string recursively ignore hidden files(#replace-string-recursively-ignore-hidden-files)
 * [VisualStudio](#visualstudio)
     * [Nuget executable not found](#nuget-executable-not-found)
     * [NUnit tests not discovered](#nunit-tests-not-discovered)
@@ -395,6 +397,16 @@ Now the USB stick will be accessible with ```ntfs-3g```.
 
 ```
 sudo apt-get install ntfs-3g
+```
+
+## UNIX/Linux 
+
+#### Replace string recursively ignore hidden files 
+
+The -i argument to sed must have the name of the backup suffix for OSX. It's optional for Linux but must come after the -i with no intervening space.
+
+```
+find . \( ! -path '*/.*' \) -type f -exec sed -i~ "s/alpha/delta/g" '{}' ';'
 ```
 
 
