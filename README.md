@@ -39,7 +39,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
     * [PostgreSQL install](#postgresql-install-ubuntu)
 * [UNIX/Linux](#unixlinux)
-    * [Replace string recursively ignore hidden files(#replace-string-recursively-ignore-hidden-files)
+    * [Replace string recursively ignore hidden files](#replace-string-recursively-ignore-hidden-files)
 * [VisualStudio](#visualstudio)
     * [Nuget executable not found](#nuget-executable-not-found)
     * [NUnit tests not discovered](#nunit-tests-not-discovered)
