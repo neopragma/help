@@ -34,6 +34,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Boot to command line](#boot-to-command-line)
     * [Determine the Ubuntu version](#determine-the-ubuntu-version)
     * [Determine the types of filesystems](#determine-the-types-of-filesystems)
+    * [Enable ssh connection as root](#enable-ssh-connection-as-root)
     * [HP printer drivers](#hp-printer-drivers)
     * [Format USB stick NTFS for Ubuntu](#format-usb-stick-ntfs-for-ubuntu)
     * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
@@ -363,6 +364,27 @@ lsb_release -a
 ```shell
 df -T
 ```
+
+#### Enable ssh connection as root
+
+Edit /etc/ssh/sshd_config:
+
+```shell
+PermitRootLogin yes
+```
+
+Restart sshd
+
+```shell
+/etc/init.d/ssh restart
+```
+
+Set root password if there isn't one
+
+```shell
+sudo passwd root
+```
+
 
 #### HP printer drivers
 
