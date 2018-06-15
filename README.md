@@ -15,6 +15,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [stop tracking files](#stop-tracking-files)
 * [gnome](#gnome)
     * [disable overlay scrollbars](#disable-overlay-scrollbars)
+    * [disable screen timeout](#disable-screen-timeout)
 * [OSX](#osx)
     * [Disable writing DS_Store files on network volumes](#disable-writing-ds_store-files-on-network-volumes)
     * [File is in use by macos and cannot be opened](#file-is-in-use)
@@ -161,6 +162,19 @@ Those pesky overlay scrollbars that are enabled by default in Ubuntu prevent you
 
 ```shell
 gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false
+```
+
+#### Disable screen timeout
+
+#### Problem 
+
+Screen times out and locks during presentations, demonstrations, mobbing sessions, etc.
+
+#### Solution 
+
+```shell 
+gsettings set org.gnome.desktop.session idle-delay 0
+gsettings set org.gnome.desktop.screensaver lock-enabled false
 ```
 
 ## OSX
