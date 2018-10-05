@@ -184,7 +184,7 @@ gsettings set org.gnome.desktop.screensaver lock-enabled false
 #### Update Gradle from command line 
 
 ```shell
-./gradlew wrapper — gradle-version 4.10.2
+./gradlew wrapper --gradle-version 4.10.2
 ```
 
 ## OSX
