@@ -16,6 +16,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
 * [gnome](#gnome)
     * [disable overlay scrollbars](#disable-overlay-scrollbars)
     * [disable screen timeout](#disable-screen-timeout)
+* [Gradle](#gradle)
+    * [update_gradle_from_command_line](#update-gradle-from-command-line)
 * [OSX](#osx)
     * [Disable writing DS_Store files on network volumes](#disable-writing-ds_store-files-on-network-volumes)
     * [File is in use by macos and cannot be opened](#file-is-in-use)
@@ -175,6 +177,14 @@ Screen times out and locks during presentations, demonstrations, mobbing session
 ```shell 
 gsettings set org.gnome.desktop.session idle-delay 0
 gsettings set org.gnome.desktop.screensaver lock-enabled false
+```
+
+## Gradle
+
+#### Update Gradle from command line 
+
+```shell
+./gradlew wrapper — gradle-version 4.10.2
 ```
 
 ## OSX
