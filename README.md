@@ -16,7 +16,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
 * [gnome](#gnome)
     * [disable overlay scrollbars](#disable-overlay-scrollbars)
     * [disable screen timeout](#disable-screen-timeout)
-    * [Gnome Keyring setup for Github PAT(#gnomekeyring-for-github)
+    * [Gnome Keyring setup for Github PAT](#gnomekeyring-for-github)
 * [Gradle](#gradle)
     * [update_gradle_from_command_line](#update-gradle-from-command-line)
 * [OSX](#osx)
