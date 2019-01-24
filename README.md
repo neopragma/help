@@ -16,6 +16,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
 * [gnome](#gnome)
     * [disable overlay scrollbars](#disable-overlay-scrollbars)
     * [disable screen timeout](#disable-screen-timeout)
+    * [Gnome Keyring setup for Github PAT(#gnomekeyring-for-github)
 * [Gradle](#gradle)
     * [update_gradle_from_command_line](#update-gradle-from-command-line)
 * [OSX](#osx)
@@ -178,6 +179,34 @@ Screen times out and locks during presentations, demonstrations, mobbing session
 gsettings set org.gnome.desktop.session idle-delay 0
 gsettings set org.gnome.desktop.screensaver lock-enabled false
 ```
+
+#### Gnome Keyring setup for Github PAT
+
+#### How to store the Github Personal Access Token locally on a Linux instance using Gnome Keyring
+
+#### Solution
+
+Install Gnome Keyring dev package
+
+```shell
+sudo apt install libgnome-keyring-dev
+```
+
+Build credentials helper
+
+```shell
+cd /usr/share/doc/git/contrib/credential/gnome-keyring
+sudo make
+```
+
+Configure local Git to used the credentials helper
+
+```shell
+git config --global credential.helper /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+```
+
+On first use, it will prompt for a password for Gnome Keyring. Don't lose track of it!
+
 
 ## Gradle
 
