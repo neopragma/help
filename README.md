@@ -180,7 +180,7 @@ gsettings set org.gnome.desktop.session idle-delay 0
 gsettings set org.gnome.desktop.screensaver lock-enabled false
 ```
 
-#### Gnome Keyring setup for Github PAT
+#### Gnomekeyring for github
 
 #### Problem
 
