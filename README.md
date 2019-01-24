@@ -16,7 +16,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
 * [gnome](#gnome)
     * [disable overlay scrollbars](#disable-overlay-scrollbars)
     * [disable screen timeout](#disable-screen-timeout)
-    * [Gnome Keyring setup for Github PAT](#gnomekeyring-for-github)
+    * [gnomekeyring for github](#gnomekeyring-for-github)
 * [Gradle](#gradle)
     * [update_gradle_from_command_line](#update-gradle-from-command-line)
 * [OSX](#osx)
@@ -182,7 +182,9 @@ gsettings set org.gnome.desktop.screensaver lock-enabled false
 
 #### Gnome Keyring setup for Github PAT
 
-#### How to store the Github Personal Access Token locally on a Linux instance using Gnome Keyring
+#### Problem
+
+How to store the Github Personal Access Token locally on a Linux instance using Gnome Keyring
 
 #### Solution
 
