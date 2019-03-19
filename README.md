@@ -13,6 +13,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [diff zipped files](#diff-zipped-files)
 * [git](#git)
     * [stop tracking files](#stop-tracking-files)
+* [github](#github)
+    * [list your repositories](#list-your-repositories)
 * [gnome](#gnome)
     * [disable overlay scrollbars](#disable-overlay-scrollbars)
     * [disable screen timeout](#disable-screen-timeout)
@@ -151,6 +153,16 @@ Solution: Update ```.gitignore``` with filenames to ignore and then:
 git rm -r --cached .
 git add .
 git commit -m "Cleaned up cached untracked files"
+```
+
+## github
+
+#### list your repositories
+
+List the names of your repositories in alphabetical order.
+
+```shell
+curl "https://api.github.com/users/$GIT_USER/repos?access_token=$GIT_ACCESS_TOKEN&per_page=1000&type=all" | grep '"name":' | sort
 ```
 
 ## gnome
