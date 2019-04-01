@@ -57,6 +57,8 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Equivalent of touch command](#equivalent-of-touch-command)
     * [HP printer drivers for Windows](#hp-printer-drivers-for-windows)
     * [Open command line elevated](#command-line-elevated)
+* [Wordpress](#wordpress)
+    * [Delete all unapproved comments](#delete-all-unapproved-comments)
 * [X-windows](#x-windows)
     * [Wrong screen resolution](#wrong-screen-resolution)
 * [yum](#yum)
@@ -583,6 +585,22 @@ Start-Process cmd -Verb RunAs
 ```
 
 A second command-line window opens running with Administrator privileges.
+
+## Wordpress
+
+#### Delete all unapproved comments
+
+1. Go to phpmyadmin in your control panel (based on your hosting plan)
+
+2. Click your Word Press database link
+
+3. Click on the comments table (You can click browse to view all the approved and unapproved comments)
+
+4. Click the mySQL tab. This will open up a query box. Delete the default query and type in:
+
+DELETE FROM wp_comments WHERE comment_approved = 0
+
+5. Click go, this will delete all the unapproved comments
 
 ## X-windows
 
