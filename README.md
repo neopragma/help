@@ -22,6 +22,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
 * [Gradle](#gradle)
     * [update_gradle_from_command_line](#update-gradle-from-command-line)
 * [OSX](#osx)
+    * [Add divider to Dock](#add-divider-to-dock)
     * [Disable writing DS_Store files on network volumes](#disable-writing-ds_store-files-on-network-volumes)
     * [File is in use by macos and cannot be opened](#file-is-in-use)
     * [Hidden files](#hidden-files)
@@ -233,6 +234,13 @@ On first use, it will prompt for a password for Gnome Keyring. Don't lose track 
 ```
 
 ## OSX
+
+#### Add divider to Dock
+
+```shell```
+defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
+killall Dock
+```
 
 #### Disable writing .DS_Store files on network volumes
 
