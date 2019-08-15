@@ -237,7 +237,7 @@ On first use, it will prompt for a password for Gnome Keyring. Don't lose track 
 
 #### Add divider to Dock
 
-```shell```
+```shell
 defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
 killall Dock
 ```
