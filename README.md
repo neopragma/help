@@ -286,17 +286,6 @@ It will take you to a download page. The file you download will be a .zip archiv
 
 OS X mounts external NTFS drive as read-only. 
 
-#### PostgreSQL install ubuntu
-
-Install PostgreSQL package and ```pg``` gem.
-
-```shell
-sudo apt-get install postgresql
-sudo apt-get install libpq-dev
-```
-The ```pg``` gem can be dependent on the PostgreSQL version. See https://stackoverflow.com/questions/14913572/cant-install-pg-gem.
-
-
 #### Solution
 
 Connect the NTFS drive to the Mac. Open Terminal and find the UUID of the drive:
