@@ -43,7 +43,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [HP printer drivers](#hp-printer-drivers)
     * [Format USB stick NTFS for Ubuntu](#format-usb-stick-ntfs-for-ubuntu)
     * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
-    * [PostgreSQL install on Ubuntu](#install-postgresql-on-ubuntu)
+    * [PostgreSQL install on Ubuntu](#postgresql-install-on-ubuntu)
 * [UNIX/Linux](#unixlinux)
     * [Replace string recursively ignore hidden files](#replace-string-recursively-ignore-hidden-files)
 * [VisualStudio](#visualstudio)
