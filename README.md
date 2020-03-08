@@ -73,14 +73,14 @@ Change enabled=1 to enabled=0
 
 ## apt
 
-#### Encountered a section with no package header
+### Encountered a section with no package header
 
 ```shell
 sudo rm /var/lib/apt/lists/* -vf
 sudo apt update
 ```
 
-#### Package list corrupted
+### Package list corrupted
 
 ```shell
 E: Problem with MergeList /var/lib/apt/lists/[foo]
@@ -117,7 +117,7 @@ sudo apt-get update
 
 ## dpkg
 
-#### Status database area locked
+### Status database area locked
 
 ```shell
 dpkg: status database area is locked by another process while trying to install
@@ -132,7 +132,7 @@ sudo dpkg --configure -a
 
 ## diff
 
-#### diff zipped files
+### diff zipped files
 
 Compare the entry names of two zipped files without decompressing them. 
 
@@ -144,7 +144,7 @@ Reference: https://stackoverflow.com/questions/35581274/diff-files-inside-of-zip
 
 ## git
 
-#### stop tracking files
+### stop tracking files
 
 Symptom: ```git status``` shows files you don't want to track.
 
@@ -158,7 +158,7 @@ git commit -m "Cleaned up cached untracked files"
 
 ## github
 
-#### list your repositories
+### list your repositories
 
 List the names of your repositories in alphabetical order.
 
@@ -168,7 +168,7 @@ curl "https://api.github.com/users/$GIT_USER/repos?access_token=$GIT_ACCESS_TOKE
 
 ## gnome
 
-#### Disable overlay scrollbars
+### Disable overlay scrollbars
 
 #### Problem
 
@@ -180,7 +180,7 @@ Those pesky overlay scrollbars that are enabled by default in Ubuntu prevent you
 gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false
 ```
 
-#### Disable screen timeout
+### Disable screen timeout
 
 #### Problem 
 
@@ -193,7 +193,7 @@ gsettings set org.gnome.desktop.session idle-delay 0
 gsettings set org.gnome.desktop.screensaver lock-enabled false
 ```
 
-#### Gnomekeyring for github
+### Gnomekeyring for github
 
 #### Problem
 
@@ -225,7 +225,7 @@ On first use, it will prompt for a password for Gnome Keyring. Don't lose track 
 
 ## Gradle
 
-#### Update Gradle from command line 
+### Update Gradle from command line 
 
 ```shell
 ./gradlew wrapper --gradle-version 4.10.2
@@ -233,20 +233,20 @@ On first use, it will prompt for a password for Gnome Keyring. Don't lose track 
 
 ## OSX
 
-#### Add divider to Dock
+### Add divider to Dock
 
 ```shell
 defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
 killall Dock
 ```
 
-#### Disable writing .DS_Store files on network volumes
+### Disable writing .DS_Store files on network volumes
 
 ```shell
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 ```
 
-#### File is in use
+### File is in use
 
 Creator and type attributes are modified by Finder during a file copy operation. To reset:
 
@@ -260,7 +260,7 @@ If the SetFile command is not installed, do this:
 xcode-select --install
 ```
 
-#### Hidden files
+### Hidden files
 
 Apple is very serious about keeping hidden files hidden. OSX is far less user-friendly in this regard than any other \*nix system. Do this:
 
@@ -270,7 +270,7 @@ defaults write -g AppleShowAllFiles -bool true
 
 and then re-launch any applications you would like to show hidden files in the Open dialog.
 
-#### HP printer drivers for OSX
+### HP printer drivers for OSX
 
 Go to http://support.hp.com/us-en/drivers
 
@@ -280,7 +280,7 @@ Choose 'Apple OS X' as the operating system and select the version number.
 
 It will take you to a download page. The file you download will be a .zip archive containing an installer.
 
-#### NTFS filesystem readonly
+### NTFS filesystem readonly
 
 OS X mounts external NTFS drive as read-only. 
 
@@ -317,7 +317,7 @@ You can define a symlink for a Desktop icon like this:
 sudo ln -s /Volumes/DRIVENAME ~/Desktop/DRIVENAME
 ```
 
-#### Make an app out of a shell script
+### Make an app out of a shell script
 
 1. Write the shell script.
 2. In Automator, choose ```run shell script``` and write a one-liner to execute the shell script.
@@ -326,20 +326,19 @@ sudo ln -s /Volumes/DRIVENAME ~/Desktop/DRIVENAME
 5. Right-click on the app file and choose ```Get Info```.
 6. Paste the icon over the small icon image located in the upper left-hand corner of the ```Info``` dialog.
 
-#### Remove .DS_Store files recursively
+### Remove .DS_Store files recursively
 
 ```shell
 find . -name ‘*.DS_Store’ -type f -delete
 ```
 
-#### Remove all .DS_Store files system-wide
+### Remove all .DS_Store files system-wide
 
 ```shell
 sudo find / -name ".DS_Store" -depth -exec rm {} \;
 ```
 
-
-#### Replace strings in files recursively
+### Replace strings in files recursively
 
 ```shell
 export LC_CTYPE=C
@@ -358,7 +357,7 @@ If that doesn't work, run ```sudo apt update``` and look for any errors (even if
 
 ## Ubuntu
 
-#### Application menu display problem
+### Application menu display problem
 
 For some applications, menus don't show up on Ubuntu (I think 13.04 onward) and the application window appears to be shoved up into the top of the screen. To fix this, set environment variable ```UBUNTU_MENUPROXY``` to 0 or to nothing. You can do it on the command line or in a ```.desktop``` file.
 
@@ -409,19 +408,19 @@ To set the display resolution appropriately for the connected display device:
 xrandr --output `xrandr | grep " connected"|cut -f1 -d" "` --mode 1920x1080
 ```
 
-#### Determine the Ubuntu version
+### Determine the Ubuntu version
 
 ```shell
 lsb_release -a
 ```
 
-#### Determine the types of filesystems
+### Determine the types of filesystems
 
 ```shell
 df -T
 ```
 
-#### Enable ssh connection as root
+### Enable ssh connection as root
 
 Edit /etc/ssh/sshd_config:
 
@@ -441,8 +440,7 @@ Set root password if there isn't one
 sudo passwd root
 ```
 
-
-#### HP printer drivers
+### HP printer drivers
 
 Find out what version of HPLIP is installed:
 
@@ -456,7 +454,7 @@ Install HPLIP
 sudo apt-get install hplip
 ```
 
-#### Format USB stick NTFS for Ubuntu
+### Format USB stick NTFS for Ubuntu
 
 Insert the USB stick. If it's a new one that's preformatted FAT32, Ubuntu will add it to the device list but not mount it.
 
@@ -471,13 +469,13 @@ sudo mkfs.ntfs /dev/sdb1
 Now the USB stick will be accessible with ```ntfs-3g```.
 
 
-#### NTFS filesystem is read-only Ubuntu
+### NTFS filesystem is read-only Ubuntu
 
 ```
 sudo apt-get install ntfs-3g
 ```
 
-#### PostgreSQL install on Ubuntu
+### PostgreSQL install on Ubuntu
 
 The basic installation instructions here are useful: https://www.howtoforge.com/tutorial/ubuntu-postgresql-installation/
 
@@ -492,7 +490,7 @@ sudo sed -i "/#listen_addresses/c\listen_addresses = \'*\'" /etc/postgresql/*/ma
 
 ## UNIX/Linux 
 
-#### Replace string recursively ignore hidden files 
+### Replace string recursively ignore hidden files 
 
 The -i argument to sed must have the name of the backup suffix for OSX. It's optional for Linux but must come after the -i with no intervening space.
 
@@ -503,13 +501,13 @@ find . \( ! -path '*/.*' \) -type f -exec sed -i~ "s/alpha/delta/g" '{}' ';'
 
 ## VisualStudio
 
-#### Nuget executable not found
+### Nuget executable not found
 
 VisualStudio can't find a nuget.exe when it tries to build a project.
 
 Solution: Download a nuget.exe from https://dist.nuget.org/index.html
 
-#### NUnit tests not discovered
+### NUnit tests not discovered
 
 When you run tests, it says there are no NUnit tests to run.
 
@@ -521,7 +519,7 @@ Solution:
 
 ## VMWare Fusion
 
-#### Fusion 10 does not start correctly on OSX 10.12
+### Fusion 10 does not start correctly on OSX 10.12
 
 VMWare Fusion 10 starts in a corrupted state when opened via clicking its icon. Workaround is to start it from a command line:
 
@@ -532,7 +530,7 @@ VMWare Fusion 10 starts in a corrupted state when opened via clicking its icon. 
 
 ## Windows
 
-#### Equivalent of kill command
+### Equivalent of kill command
 
 Find out what command options are available:
 
@@ -552,13 +550,13 @@ Kill a process by PID:
 taskkill /pid 1234 /f
 ```
 
-
-#### Equivalent of touch command
+### Equivalent of touch command
 
 ```shell
 type nul > filename & copy filename +,,
 ```
-#### HP printer drivers for Windows
+
+### HP printer drivers for Windows
 
 Go to http://support.hp.com/us-en/drivers
 
@@ -568,7 +566,7 @@ Choose 'Microsoft Windows' as the operating system and select the version number
 
 It will take you to a download page. The file you download will be an .exe you can run to install the driver.
 
-#### Command line elevated
+### Command line elevated
 
 Open a standard command-line window
 
@@ -588,7 +586,7 @@ A second command-line window opens running with Administrator privileges.
 
 ## Wordpress
 
-#### Delete all unapproved comments
+### Delete all unapproved comments
 
 1. Go to phpmyadmin in your control panel (based on your hosting plan)
 
@@ -604,11 +602,11 @@ DELETE FROM wp_comments WHERE comment_approved = 0
 
 ## X-windows
 
-#### Wrong screen resolution
+### Wrong screen resolution
 
 When running as a guest OS in a virtual machine (VM), the OS does not recognize the screen resolutions available on the actual hardware. The xorg video driver normally discovers the optimal screen resolution and sets it automatically, but this does not always happen when you set up a guest OS in a VM. The cause may be related to hardware, the host OS or video drivers, the guest OS, the VM's video driver, or a configuration error that you cannot find. 
 
-#### Solution
+### Solution
 
 Find out the maximum framebuffer size supported on the host system (not the VM):
 
@@ -644,7 +642,7 @@ Edit ```/etc/X11/xorg.conf``` with root privileges.
 
 Restart Xorg service. Procedure differs by OS and distro; see references or Google it.
 
-#### References
+### References
 
 * Debian/Ubuntu: http://ubuntuforums.org/showthread.php?t=1112186
 * Debian/Ubuntu: http://askubuntu.com/questions/1220/how-can-i-restart-x-server-from-the-command-line
@@ -656,7 +654,7 @@ Restart Xorg service. Procedure differs by OS and distro; see references or Goog
 
 ## yum
 
-#### Yum lock is held
+### Yum lock is held
 
 ```shell
 Another app is currently holding the yum lock; waiting for it to exit...
@@ -665,7 +663,7 @@ The other application is: yum
 
 This means an instance of yum is hanging around in the background. You can't do anything with it.
 
-#### Solution
+### Solution
 
 ```shell
 sudo killall yum
