@@ -32,8 +32,6 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Remove .DS_Store files recursively](#remove-ds_store-files-recursively)
     * [Remove all .DS_Store files system-wide](#remove-all-ds_store-files-system-wide)
     * [Replace strings in files recursively](#replace-strings-in-files-recursively)
-* [PostgreSQL](#postgresql)
-    * [Install PostgreSQL on Ubuntu](#install-postgresql-on-ubuntu)
 * [rvm](#rvm)
     * [rvm install gets permission denied errors](#rvm-install-gets-permission-denied-errors)
 * [Ubuntu](#ubuntu)
@@ -45,7 +43,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [HP printer drivers](#hp-printer-drivers)
     * [Format USB stick NTFS for Ubuntu](#format-usb-stick-ntfs-for-ubuntu)
     * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
-    * [PostgreSQL install](#postgresql-install-ubuntu)
+    * [PostgreSQL install on Ubuntu](#install-postgresql-on-ubuntu)
 * [UNIX/Linux](#unixlinux)
     * [Replace string recursively ignore hidden files](#replace-string-recursively-ignore-hidden-files)
 * [VisualStudio](#visualstudio)
@@ -349,21 +347,6 @@ export LANG=C
 find . *.html -type f -print0 | xargs -0 sed -i "" 's/Software Craftsperson/Solution Developer/g'
 ```
 
-## PostgreSQL
-
-#### Install PostgreSQL on Ubuntu
-
-The basic installation instructions here are useful: https://www.howtoforge.com/tutorial/ubuntu-postgresql-installation/
-
-Then do this:
-
-```shell
-sudo cp /etc/postgresql/*/main/postgresql.conf ./postgresql.conf.orig
-sudo cp /etc/postgresql/*/main/pg_hba.conf ./pg_hba.conf.orig
-sudo cp ./pg_hba.conf /etc/postgresql/*/main
-sudo sed -i "/#listen_addresses/c\listen_addresses = \'*\'" /etc/postgresql/*/main/postgresql.conf
-```
-
 ## rvm
 
 ### rvm install gets permission denied errors
@@ -492,6 +475,19 @@ Now the USB stick will be accessible with ```ntfs-3g```.
 
 ```
 sudo apt-get install ntfs-3g
+```
+
+#### PostgreSQL install on Ubuntu
+
+The basic installation instructions here are useful: https://www.howtoforge.com/tutorial/ubuntu-postgresql-installation/
+
+Then do this:
+
+```shell
+sudo cp /etc/postgresql/*/main/postgresql.conf ./postgresql.conf.orig
+sudo cp /etc/postgresql/*/main/pg_hba.conf ./pg_hba.conf.orig
+sudo cp ./pg_hba.conf /etc/postgresql/*/main
+sudo sed -i "/#listen_addresses/c\listen_addresses = \'*\'" /etc/postgresql/*/main/postgresql.conf
 ```
 
 ## UNIX/Linux 
