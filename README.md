@@ -288,6 +288,13 @@ OS X mounts external NTFS drive as read-only.
 
 #### Solution
 
+There is no longer a free workaround for this problem. You have to purchase a commercial product to get read/write support for NTFS. Here are two: 
+
+- Paragon: https://www.paragon-software.com/home/ntfs-mac/ 
+- Tuxera: https://www.tuxera.com/products/tuxera-ntfs-for-mac/
+
+_The following instructions are obsolete_
+
 Connect the NTFS drive to the Mac. Open Terminal and find the UUID of the drive:
 
 ```shell
