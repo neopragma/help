@@ -413,7 +413,7 @@ xrandr --output `xrandr | grep " connected"|cut -f1 -d" "` --mode 1920x1080
 
 "Turn off" suspend, hibernate, and hybrid suspend in Linux.
 
-shell ```
+```shell
 sudo systemctl mask \
     sleep.target \
     suspend.target \
