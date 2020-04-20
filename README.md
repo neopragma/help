@@ -37,6 +37,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
 * [Ubuntu](#ubuntu)
     * [Application menu display problem](#application-menu-display-problem)
     * [Boot to command line](#boot-to-command-line)
+    * [Deactivate suspend, hibernate, and hybrid-suspend](#deactivate-suspend)
     * [Determine the Ubuntu version](#determine-the-ubuntu-version)
     * [Determine the types of filesystems](#determine-the-types-of-filesystems)
     * [Enable ssh connection as root](#enable-ssh-connection-as-root)
@@ -407,6 +408,53 @@ To set the display resolution appropriately for the connected display device:
 ```shell
 xrandr --output `xrandr | grep " connected"|cut -f1 -d" "` --mode 1920x1080
 ```
+
+### Deactivate suspend 
+
+"Turn off" suspend, hibernate, and hybrid suspend in Linux.
+
+shell ```
+sudo systemctl mask \
+    sleep.target \
+    suspend.target \
+    hibernate.target \
+    hybrid-sleep.target
+
+sudo systemctl restart systemd-logind.service
+```
+
+Check status: 
+
+```shell 
+systemctl status sleep.target suspend.target hibernate.target hybrid-sleep.target
+```    
+
+Reactive these features: 
+
+```shell 
+sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
+```
+
+What does this actually do? 
+
+The mask command does this: 
+
+```shell 
+Created symlink /etc/systemd/system/sleep.target → /dev/null.
+Created symlink /etc/systemd/system/suspend.target → /dev/null.
+Created symlink /etc/systemd/system/hibernate.target → /dev/null.
+Created symlink /etc/systemd/system/hybrid-sleep.target → /dev/null.
+```
+
+The unmask command does this: 
+
+```shell 
+Removed /etc/systemd/system/sleep.target.
+Removed /etc/systemd/system/suspend.target.
+Removed /etc/systemd/system/hibernate.target.
+Removed /etc/systemd/system/hybrid-sleep.target.
+```
+
 
 ### Determine the Ubuntu version
 
