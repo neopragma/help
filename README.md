@@ -45,6 +45,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Format USB stick NTFS for Ubuntu](#format-usb-stick-ntfs-for-ubuntu)
     * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
     * [PostgreSQL install on Ubuntu](#postgresql-install-on-ubuntu)
+    * [Wired networking disabled on boot](#wired-networking-disabled-on-boot)
 * [UNIX/Linux](#unixlinux)
     * [Replace string recursively ignore hidden files](#replace-string-recursively-ignore-hidden-files)
 * [VisualStudio](#visualstudio)
@@ -535,6 +536,14 @@ sudo cp /etc/postgresql/*/main/pg_hba.conf ./pg_hba.conf.orig
 sudo cp ./pg_hba.conf /etc/postgresql/*/main
 sudo sed -i "/#listen_addresses/c\listen_addresses = \'*\'" /etc/postgresql/*/main/postgresql.conf
 ```
+
+### Wired networking disabled on boot 
+
+Starting with Ubuntu 20.04, I noticed wired networking was off after startup. This may be the default for some versions of Ubuntu. If you want wired networking on by default on boot, edit file ```/etc/NetworkManager/NetworkManager.conf``` with sudo. Change the line ```managed=false``` to ```managed=true```. Then you can restart or run the following command: 
+
+```shell 
+sudo service network-manager restart 
+``` 
 
 ## UNIX/Linux 
 
