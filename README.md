@@ -20,6 +20,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [disable screen timeout](#disable-screen-timeout)
     * [gnomekeyring for github](#gnomekeyring-for-github)
 * [Gradle](#gradle)
+    * [recompile with xlint](#recompile-with-xlint)
     * [update_gradle_from_command_line](#update-gradle-from-command-line)
 * [OSX](#osx)
     * [Add divider to Dock](#add-divider-to-dock)
@@ -226,6 +227,17 @@ On first use, it will prompt for a password for Gnome Keyring. Don't lose track 
 
 
 ## Gradle
+
+### Recompile with Xlint 
+
+When working with Java and Gradle, sometimes Gradle issues a warning and suggests recompiling with an -Xlint option, but it does not explain how to do this. You have to add a specification to the build.gradle file as follows.
+
+```shell
+tasks.withType(JavaCompile) {
+    options.compilerArgs << '-Xlint:unchecked'
+    options.deprecation = true
+}
+```
 
 ### Update Gradle from command line 
 
