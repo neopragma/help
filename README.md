@@ -15,6 +15,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [stop tracking files](#stop-tracking-files)
 * [github](#github)
     * [list your repositories](#list-your-repositories)
+    * [personal access token](#personal-access-token)
 * [gnome](#gnome)
     * [disable overlay scrollbars](#disable-overlay-scrollbars)
     * [disable screen timeout](#disable-screen-timeout)
@@ -168,6 +169,16 @@ List the names of your repositories in alphabetical order.
 ```shell
 curl "https://api.github.com/users/$GIT_USER/repos?access_token=$GIT_ACCESS_TOKEN&per_page=1000&type=all" | grep '"name":' | sort
 ```
+
+### personal access token 
+
+After generating a personal access token on Github, for Ubuntu you must enter this:
+
+```shell
+git config --global credential.helper store
+```
+
+On the next push, it will prompt for a password. Enter the personal access token instead of your password.
 
 ## gnome
 
