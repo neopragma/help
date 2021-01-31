@@ -12,6 +12,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
 * [diff](#diff)
     * [diff zipped files](#diff-zipped-files)
 * [git](#git)
+    * [hprof file prevents push](#hprof-file-prevents-push)
     * [stop tracking files](#stop-tracking-files)
 * [github](#github)
     * [list your repositories](#list-your-repositories)
@@ -147,6 +148,20 @@ diff -y <(unzip -l foo.zip) <(unzip -l bar.zip) --suppress-common-lines
 Reference: https://stackoverflow.com/questions/35581274/diff-files-inside-of-zip-without-extracting-it
 
 ## git
+
+### hprof file prevents push 
+
+Files named java_pid99999.hprof are due to issues with heap memory being exceeded. If this happens in your project, you won't be able to push to github. Use this command to clean up the local history (substituting the real filename):
+
+```shell 
+git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch java_pid26029.hprof' 
+``` 
+
+Add this to .gitignore and commit it: 
+
+```shell 
+*.hprof 
+``` 
 
 ### stop tracking files
 
