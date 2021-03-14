@@ -48,6 +48,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Format USB stick NTFS for Ubuntu](#format-usb-stick-ntfs-for-ubuntu)
     * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
     * [PostgreSQL install on Ubuntu](#postgresql-install-on-ubuntu)
+    * [ULauncher install on Ubuntu](#ulauncher-install-on-ubuntu)
     * [Wired networking disabled on boot](#wired-networking-disabled-on-boot)
 * [UNIX/Linux](#unixlinux)
     * [Replace string recursively ignore hidden files](#replace-string-recursively-ignore-hidden-files)
@@ -573,6 +574,13 @@ sudo cp /etc/postgresql/*/main/postgresql.conf ./postgresql.conf.orig
 sudo cp /etc/postgresql/*/main/pg_hba.conf ./pg_hba.conf.orig
 sudo cp ./pg_hba.conf /etc/postgresql/*/main
 sudo sed -i "/#listen_addresses/c\listen_addresses = \'*\'" /etc/postgresql/*/main/postgresql.conf
+```
+
+### ULauncher install on Ubuntu 
+
+```shell 
+sudo add-apt-repository ppa:agornostal/ulauncher 
+sudo apt install ulauncher 
 ```
 
 ### Wired networking disabled on boot 
