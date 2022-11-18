@@ -66,7 +66,7 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Open command line elevated](#command-line-elevated)
 * [Windows Subsystem for Linux](#windows-subsystem-for-linux)
     * [Access Windows files from Linux](#access-windows-files-from-linux)
-    * [Access Linux files from Windows]#(access-linux-files-from-windows)
+    * [Access Linux files from Windows](#access-linux-files-from-windows)
 * [Wordpress](#wordpress)
     * [Delete all unapproved comments](#delete-all-unapproved-comments)
 * [X-windows](#x-windows)
