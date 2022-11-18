@@ -261,7 +261,7 @@ cd /usr/share/doc/git/contrib/credential/gnome-keyring
 sudo make
 ```
 
-Configure local Git to used the credentials helper
+Configure local Git to use the credentials helper
 
 ```shell
 git config --global credential.helper /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
