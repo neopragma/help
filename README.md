@@ -64,6 +64,9 @@ These are issues I encounter from time to time when configuring systems. Rather 
     * [Equivalent of touch command](#equivalent-of-touch-command)
     * [HP printer drivers for Windows](#hp-printer-drivers-for-windows)
     * [Open command line elevated](#command-line-elevated)
+* [Windows Subsystem for Linux](#windows-subsystem-for-linux)
+    * [Access Windows files from Linux](#access-windows-files-from-linux)
+    * [Access Linux files from Windows]#(access-linux-files-from-windows)
 * [Wordpress](#wordpress)
     * [Delete all unapproved comments](#delete-all-unapproved-comments)
 * [X-windows](#x-windows)
@@ -700,6 +703,18 @@ Start-Process cmd -Verb RunAs
 ```
 
 A second command-line window opens running with Administrator privileges.
+
+## Windows Subsystem for Linux 
+
+### Access Windows Files from Linux
+
+Your Windows C: drive is located at /mnt/c.
+
+### Access Linux Files from Windows
+
+In Windows, enter \\wsl$ in the address bar of Windows Explorer. It will show a list of installed Linux instances. You can navigate through them using Explorer.
+
+On a WSL command line, enter "explorer.exe ." to open Windows Explorer in the current directory.
 
 ## Wordpress
 
