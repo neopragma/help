@@ -2,7 +2,7 @@
 extract_text_between_square_brackets = /(?<=\[)(.*?)(?=\])/
 extract_link = /\((.*?)\)/
 
-puts '```text'
+puts '``'
 File.foreach("docs/contents.md") { |line| 
   matches = line.match(extract_text_between_square_brackets)
   matches.captures.each() { |capture|
@@ -17,5 +17,5 @@ File.foreach("docs/contents.md") { |line|
         kwic_entry.clear
     }
   } unless matches == nil
-  puts '```'
+  puts '``'
 }
