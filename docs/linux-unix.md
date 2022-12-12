@@ -1,6 +1,6 @@
-# Notes for Linux and Unix 
-
 [Contents](contents.md) | [KWIC Index](kwic-index.md)
+
+# Notes for Linux and Unix 
 
 * [diff](#diff)
     * [diff zipped files](#diff-zipped-files)

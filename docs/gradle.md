@@ -1,6 +1,6 @@
-# Notes on Gradle
-
 [Contents](contents.md) | [KWIC Index](kwic-index.md)
+
+# Notes on Gradle
 
 * [recompile with xlint](#recompile-with-xlint)
 * [update_gradle_from_command_line](#update-gradle-from-command-line)

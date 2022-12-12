@@ -1,6 +1,6 @@
-# Notes for Git and related tools and services
-
 [Contents](contents.md) | [KWIC Index](kwic-index.md)
+
+# Notes for Git and related tools and services
 
 * [git](#git)
     * [change default branch to main](#change-default-branch-to-main)

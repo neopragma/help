@@ -1,6 +1,6 @@
-# Notes on Apple OS X 
-
 [Contents](contents.md) | [KWIC Index](kwic-index.md)
+
+# Notes on Apple OS X 
 
 * [Add divider to Dock](#add-divider-to-dock)
 * [.DS_Store](#ds_store)

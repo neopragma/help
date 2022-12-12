@@ -1,6 +1,6 @@
-# Notes for Gnome desktop
-
 [Contents](contents.md) | [KWIC Index](kwic-index.md)
+
+# Notes for Gnome desktop
 
 * [disable overlay scrollbars](#disable-overlay-scrollbars)
 * [disable screen timeout](#disable-screen-timeout)

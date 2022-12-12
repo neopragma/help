@@ -1,3 +1,5 @@
+[KWIC Index](kwic-index.md)
+
 # Help Contents
 
 * [Git and related tools and services](git.md)
