@@ -1,27 +1,30 @@
-# Help Index
+# Help Contents
 
-* [Debian and Ubuntu Linux](#debian-and-ubuntu-linux)
-    * [apport](#apport)
-        * [Disable bogus crash reports](#apport-disable)
-    * [Application menu display problem](#application-menu-display-problem)
-    * [apt](#apt)
-        * [Encountered a section with no package header](#encountered-a-section-with-no-package-header)
-        * [Problem with MergeList...](#package-list-corrupted)
-    * [Boot to command line](#boot-to-command-line)
-    * [Deactivate suspend, hibernate, and hybrid-suspend](#deactivate-suspend)
-    * [Determine the Ubuntu version](#determine-the-ubuntu-version)
-    * [Determine the types of filesystems](#determine-the-types-of-filesystems)
-    * [dpkg](#dpkg)
-        * [Status database area locked...](#status-database-area-locked)
-    * [Enable ssh connection as root](#enable-ssh-connection-as-root)
-    * [HP printer drivers](#hp-printer-drivers)
-    * [Format USB stick NTFS for Ubuntu](#format-usb-stick-ntfs-for-ubuntu)
-    * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
-    * [PostgreSQL install on Ubuntu](#postgresql-install-on-ubuntu)
-    * [ULauncher install on Ubuntu](#ulauncher-install-on-ubuntu)
-    * [Wired networking disabled on boot](#wired-networking-disabled-on-boot)
-* [diff](#diff)
-    * [diff zipped files](#diff-zipped-files)
+* [Linux and Unix: General](linux-unix.md)
+    * [diff](linux-unix.md#diff)
+        * [diff zipped files](linux-unix.md#diff-zipped-files)
+    * [Replace string recursively ignore hidden files](linux-unix.md#replace-string-recursively-ignore-hidden-files)
+
+* [Linux: Debian and derivatives](linux-debian.md)
+    * [apport](linux-debian.md#apport)
+        * [Disable bogus crash reports](linux-debian.md#apport-disable)
+    * [Application menu display problem](linux-debian.md#application-menu-display-problem)
+    * [apt](linux-debian.md#apt)
+        * [Encountered a section with no package header](linux-debian.md#encountered-a-section-with-no-package-header)
+        * [Problem with MergeList...](linux-debian.md#package-list-corrupted)
+    * [Boot to command line](linux-debian.md#boot-to-command-line)
+    * [Deactivate suspend, hibernate, and hybrid-suspend](linux-debian.md#deactivate-suspend)
+    * [Determine the Ubuntu version](linux-debian.md#determine-the-ubuntu-version)
+    * [Determine the types of filesystems](linux-debian.md#determine-the-types-of-filesystems)
+    * [dpkg](linux-debian.md#dpkg)
+        * [Status database area locked...](linux-debian.md#status-database-area-locked)
+    * [Enable ssh connection as root](linux-debian.md#enable-ssh-connection-as-root)
+    * [HP printer drivers](linux-debian.md#hp-printer-drivers)
+    * [Format USB stick NTFS for Ubuntu](linux-debian.md#format-usb-stick-ntfs-for-ubuntu)
+    * [NTFS filesystem is read-only Ubuntu](linux-debian.md#ntfs-filesystem-is-read-only-ubuntu)
+    * [PostgreSQL install on Ubuntu](linux-debian.md#postgresql-install-on-ubuntu)
+    * [ULauncher install on Ubuntu](linux-debian.md#ulauncher-install-on-ubuntu)
+    * [Wired networking disabled on boot](linux-debian.md#wired-networking-disabled-on-boot)
 * [git](#git)
     * [change default branch to main](#change-default-branch-to-main)
     * [hprof file prevents push](#hprof-file-prevents-push)
@@ -51,8 +54,6 @@
     * [Replace strings in files recursively](#replace-strings-in-files-recursively)
 * [rvm](#rvm)
     * [rvm install gets permission denied errors](#rvm-install-gets-permission-denied-errors)
-* [UNIX/Linux](#unixlinux)
-    * [Replace string recursively ignore hidden files](#replace-string-recursively-ignore-hidden-files)
 * [VisualStudio](#visualstudio)
     * [Nuget executable not found](#nuget-executable-not-found)
     * [NUnit tests not discovered](#nunit-tests-not-discovered)
@@ -74,285 +75,6 @@
     * [Yum lock is held by another process](#yum-lock-is-held)
 
 
-## Debian and Ubuntu Linux
-
-### apport
-
-#### apport-disable
-
-Edit /etc/default/apport
-
-Change enabled=1 to enabled=0
-
-### apt
-
-#### Encountered a section with no package header
-
-```shell
-sudo rm /var/lib/apt/lists/* -vf
-sudo apt update
-```
-
-#### Package list corrupted
-
-```shell
-E: Problem with MergeList /var/lib/apt/lists/[foo]
-E: The package lists or status file could not be parsed or opened.
-```
-
-This means the local package list has been corrupted.
-
-#### Solution
-
-```shell
-sudo rm /var/lib/apt/lists/* -vf
-sudo apt-get update
-```
-
-#### Alternate solution
-
-```shell
-sudo mv /var/lib/apt/lists /var/lib/apt/lists-old
-sudo mkdir -p /var/lib/apt/lists/partial
-sudo apt-get update
-```
-
-#### Alternate solution
-
-```shell
-sudo apt-get clean
-sudo apt-get update
-```
-
-#### References
-
-* http://askubuntu.com/questions/30072/how-do-i-fix-a-problem-with-mergelist-or-status-file-could-not-be-parsed-err
-
-### dpkg
-
-#### Status database area locked
-
-```shell
-dpkg: status database area is locked by another process while trying to install
-```
-
-#### Solution
-
-```shell
-sudo rm /var/lib/dpkg/lock
-sudo dpkg --configure -a
-```
-
-
-
-### Application menu display problem
-
-For some applications, menus don't show up on Ubuntu (I think 13.04 onward) and the application window appears to be shoved up into the top of the screen. To fix this, set environment variable ```UBUNTU_MENUPROXY``` to 0 or to nothing. You can do it on the command line or in a ```.desktop``` file.
-
-```shell
-UBUNTU_MENUPROXY=0 appname
-```
-
-### Boot to command line
-
-Set up Ubuntu 15.x and later to boot to a command line by default, edit ```/etc/default/grub```
-
-comment the line
-```shell
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-```
-
-Add lines:
-
-```shell 
-GRUB_CMDLINE_LINUX="text"
-GRUB_CMDLINE_LINUX_DEFAULT="text"
-```
-
-Save the file and run the following commands:
-
-```shell
-sudo update-grub
-sudo systemctl enable multi-user.target --force
-sudo systemctl set-default multi-user.target
-sudo reboot
-```
-
-When you want the graphical interface:
-
-```shell
-sudo service lightdm start
-```
-
-It will default to the screen resolution you last saved. To see what display resolutions are available on the connected display device:
-
-```shell
-xrandr
-```
-
-To set the display resolution appropriately for the connected display device:
-
-```shell
-xrandr --output `xrandr | grep " connected"|cut -f1 -d" "` --mode 1920x1080
-```
-
-### Deactivate suspend 
-
-"Turn off" suspend, hibernate, and hybrid suspend in Linux.
-
-```shell
-sudo systemctl mask \
-    sleep.target \
-    suspend.target \
-    hibernate.target \
-    hybrid-sleep.target
-
-sudo systemctl restart systemd-logind.service
-```
-
-Check status: 
-
-```shell 
-systemctl status sleep.target suspend.target hibernate.target hybrid-sleep.target
-```    
-
-Reactive these features: 
-
-```shell 
-sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
-```
-
-What does this actually do? 
-
-The mask command does this: 
-
-```shell 
-Created symlink /etc/systemd/system/sleep.target → /dev/null.
-Created symlink /etc/systemd/system/suspend.target → /dev/null.
-Created symlink /etc/systemd/system/hibernate.target → /dev/null.
-Created symlink /etc/systemd/system/hybrid-sleep.target → /dev/null.
-```
-
-The unmask command does this: 
-
-```shell 
-Removed /etc/systemd/system/sleep.target.
-Removed /etc/systemd/system/suspend.target.
-Removed /etc/systemd/system/hibernate.target.
-Removed /etc/systemd/system/hybrid-sleep.target.
-```
-
-
-### Determine the Ubuntu version
-
-```shell
-lsb_release -a
-```
-
-### Determine the types of filesystems
-
-```shell
-df -T
-```
-
-### Enable ssh connection as root
-
-Edit /etc/ssh/sshd_config:
-
-```shell
-PermitRootLogin yes
-```
-
-Restart sshd
-
-```shell
-/etc/init.d/ssh restart
-```
-
-Set root password if there isn't one
-
-```shell
-sudo passwd root
-```
-
-### HP printer drivers
-
-Find out what version of HPLIP is installed:
-
-```shell
-dpkg -l hplip
-```
-
-Install HPLIP
-
-```shell
-sudo apt-get install hplip
-```
-
-### Format USB stick NTFS for Ubuntu
-
-Insert the USB stick. If it's a new one that's preformatted FAT32, Ubuntu will add it to the device list but not mount it.
-
-Run ```dmesg``` or ```df -h``` and find the device name. It will be something like ```sdb1```.
-
-Now run
-
-```shell
-sudo mkfs.ntfs /dev/sdb1
-```
-
-Now the USB stick will be accessible with ```ntfs-3g```.
-
-
-### NTFS filesystem is read-only Ubuntu
-
-```
-sudo apt-get install ntfs-3g
-```
-
-### PostgreSQL install on Ubuntu
-
-The basic installation instructions here are useful: https://www.howtoforge.com/tutorial/ubuntu-postgresql-installation/
-
-Then do this:
-
-```shell
-sudo cp /etc/postgresql/*/main/postgresql.conf ./postgresql.conf.orig
-sudo cp /etc/postgresql/*/main/pg_hba.conf ./pg_hba.conf.orig
-sudo cp ./pg_hba.conf /etc/postgresql/*/main
-sudo sed -i "/#listen_addresses/c\listen_addresses = \'*\'" /etc/postgresql/*/main/postgresql.conf
-```
-
-### ULauncher install on Ubuntu 
-
-```shell 
-sudo add-apt-repository ppa:agornostal/ulauncher 
-sudo apt install ulauncher 
-```
-
-### Wired networking disabled on boot 
-
-Starting with Ubuntu 20.04, I noticed wired networking was off after startup. This may be the default for some versions of Ubuntu. If you want wired networking on by default on boot, edit file ```/etc/NetworkManager/NetworkManager.conf``` with sudo. Change the line ```managed=false``` to ```managed=true```. Then you can restart or run the following command: 
-
-```shell 
-sudo service network-manager restart 
-``` 
-
-
-
-
-
-## diff
-
-### diff zipped files
-
-Compare the entry names of two zipped files without decompressing them. 
-
-```shell
-diff -y <(unzip -l foo.zip) <(unzip -l bar.zip) --suppress-common-lines
-```
-
-Reference: https://stackoverflow.com/questions/35581274/diff-files-inside-of-zip-without-extracting-it
 
 ## git
 
@@ -588,17 +310,6 @@ find . *.html -type f -print0 | xargs -0 sed -i "" 's/Software Craftsperson/Solu
 This happens on Ubuntu using apt. Usually logging out and back in again clears it up.
 
 If that doesn't work, run ```sudo apt update``` and look for any errors (even if unrelated to rvm). Remove any offending entries from ```/etc/apt/sources.list``` and files under ```/etc/apt/sources.list.d```.
-
-
-## UNIX/Linux 
-
-### Replace string recursively ignore hidden files 
-
-The -i argument to sed must have the name of the backup suffix for OSX. It's optional for Linux but must come after the -i with no intervening space.
-
-```
-find . \( ! -path '*/.*' \) -type f -exec sed -i~ "s/alpha/delta/g" '{}' ';'
-```
 
 
 ## VisualStudio
