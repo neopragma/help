@@ -3,11 +3,12 @@ extract_text_between_square_brackets = /(?<=\[)(.*?)(?=\])/
 extract_link = /\((.*?)\)/
 
 File.foreach("docs/contents.md") { |line| 
+  puts "|one|two|\n|---|---|\n"
   matches = line.match(extract_text_between_square_brackets)
   matches.captures.each() { |capture|
     words = capture.split(' ')
     link = line.match(extract_link)
-    kwic_entry = []
+    kwic_entry = ['..............................']
     words.each_with_index() { |word,ix|
         kwic_entry << words[0..ix-1].join(' ').rjust(30,'.') unless ix == 0
         kwic_entry << "|[#{word}]#{link}"
