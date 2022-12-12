@@ -1,5 +1,20 @@
 # Help Contents
 
+* [Git and related tools and services](git.md)
+    * [git](git.md#git)
+        * [change default branch to main](git.md#change-default-branch-to-main)
+        * [hprof file prevents push](git.md#hprof-file-prevents-push)
+        * [rename master branch to main](git.md#rename-master-branch-to-main)
+        * [stop tracking files](git.md#stop-tracking-files)
+    * [github](git.md#github)
+        * [list your repositories](git.md#list-your-repositories)
+        * [personal access token](git.md#personal-access-token)
+
+* [Gnome desktop](gnome.md)
+    * [disable overlay scrollbars](gnome.md#disable-overlay-scrollbars)
+    * [disable screen timeout](gnome.md#disable-screen-timeout)
+    * [gnomekeyring for github](gnome.md#gnomekeyring-for-github)
+
 * [Linux and Unix: General](linux-unix.md)
     * [diff](linux-unix.md#diff)
         * [diff zipped files](linux-unix.md#diff-zipped-files)
@@ -25,18 +40,6 @@
     * [PostgreSQL install on Ubuntu](linux-debian.md#postgresql-install-on-ubuntu)
     * [ULauncher install on Ubuntu](linux-debian.md#ulauncher-install-on-ubuntu)
     * [Wired networking disabled on boot](linux-debian.md#wired-networking-disabled-on-boot)
-* [git](#git)
-    * [change default branch to main](#change-default-branch-to-main)
-    * [hprof file prevents push](#hprof-file-prevents-push)
-    * [rename master branch to main](#rename-master-branch-to-main)
-    * [stop tracking files](#stop-tracking-files)
-* [github](#github)
-    * [list your repositories](#list-your-repositories)
-    * [personal access token](#personal-access-token)
-* [gnome](#gnome)
-    * [disable overlay scrollbars](#disable-overlay-scrollbars)
-    * [disable screen timeout](#disable-screen-timeout)
-    * [gnomekeyring for github](#gnomekeyring-for-github)
 * [Gradle](#gradle)
     * [recompile with xlint](#recompile-with-xlint)
     * [update_gradle_from_command_line](#update-gradle-from-command-line)
@@ -75,122 +78,6 @@
     * [Yum lock is held by another process](#yum-lock-is-held)
 
 
-
-## git
-
-### change default branch to main 
-
-```shell
-git config --global init.defaultBranch main
-```
-
-### hprof file prevents push 
-
-Files named java_pid99999.hprof are due to issues with heap memory being exceeded. If this happens in your project, you won't be able to push to github. Use this command to clean up the local history (substituting the real filename):
-
-```shell 
-git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch java_pid26029.hprof' 
-``` 
-
-Add this to .gitignore and commit it: 
-
-```shell 
-*.hprof 
-``` 
-
-### rename master branch to main 
-
-```shell
-git branch -m master main
-```
-
-### stop tracking files
-
-Symptom: ```git status``` shows files you don't want to track.
-
-Solution: Update ```.gitignore``` with filenames to ignore and then:
-
-```shell
-git rm -r --cached .
-git add .
-git commit -m "Cleaned up cached untracked files"
-```
-
-## github
-
-### list your repositories
-
-List the names of your repositories in alphabetical order.
-
-```shell
-curl "https://api.github.com/users/$GIT_USER/repos?access_token=$GIT_ACCESS_TOKEN&per_page=1000&type=all" | grep '"name":' | sort
-```
-
-### personal access token 
-
-After generating a personal access token on Github, for Ubuntu you must enter this:
-
-```shell
-git config --global credential.helper store
-```
-
-On the next push, it will prompt for a password. Enter the personal access token instead of your password.
-
-## gnome
-
-### Disable overlay scrollbars
-
-#### Problem
-
-Those pesky overlay scrollbars that are enabled by default in Ubuntu prevent you from grabbing the side of a window to resize it. Seems like you should be able to set this in Settings -> Appearance -> Behavior, but you can't.
-
-#### Solution
-
-```shell
-gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false
-```
-
-### Disable screen timeout
-
-#### Problem 
-
-Screen times out and locks during presentations, demonstrations, mobbing sessions, etc.
-
-#### Solution 
-
-```shell 
-gsettings set org.gnome.desktop.session idle-delay 0
-gsettings set org.gnome.desktop.screensaver lock-enabled false
-```
-
-### Gnomekeyring for github
-
-#### Problem
-
-How to store the Github Personal Access Token locally on a Linux instance using Gnome Keyring
-
-#### Solution
-
-Install Gnome Keyring dev package
-
-```shell
-sudo apt install libgnome-keyring-dev
-```
-
-Build credentials helper
-
-```shell
-cd /usr/share/doc/git/contrib/credential/gnome-keyring
-sudo make
-```
-
-Configure local Git to use the credentials helper
-
-```shell
-git config --global credential.helper /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
-```
-
-On first use, it will prompt for a password for Gnome Keyring. Don't lose track of it!
 
 
 ## Gradle
