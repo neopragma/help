@@ -1,4 +1,4 @@
-```
+```text
 [KWIC](kwic-index.md) Index  
 ........................................................KWIC [Index](kwic-index.md)  
 ```
