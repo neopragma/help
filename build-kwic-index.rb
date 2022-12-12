@@ -2,7 +2,7 @@
 extract_text_between_square_brackets = /(?<=\[)(.*?)(?=\])/
 extract_link = /\((.*?)\)/
 
-puts '```shell'
+puts '```'
 File.foreach("docs/contents.md") { |line| 
   matches = line.match(extract_text_between_square_brackets)
   matches.captures.each() { |capture|
