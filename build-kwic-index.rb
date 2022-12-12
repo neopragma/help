@@ -2,8 +2,9 @@
 extract_text_between_square_brackets = /(?<=\[)(.*?)(?=\])/
 extract_link = /\((.*?)\)/
 
+puts "|one|two|\n|---|---|\n"
+
 File.foreach("docs/contents.md") { |line| 
-  puts "|one|two|\n|---|---|\n"
   matches = line.match(extract_text_between_square_brackets)
   matches.captures.each() { |capture|
     words = capture.split(' ')
