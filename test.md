@@ -1,3 +1,18 @@
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right">Git and</td>
+<td>[related](git.md) tools and services</td>
+</tr>
+</tbody>
+</table>
+
 |hey|you|
 |---|---|
 ||[KWIC](kwic-index.md) Index|
