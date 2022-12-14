@@ -3,9 +3,9 @@ extract_text_between_square_brackets = /(?<=\[)(.*?)(?=\])/
 extract_link_text = /\((.*?)\)/
 left_column = []
 right_column =  []
-page_heading = '# Keyword In Context Index'
+page_heading = '# Help KWIC Index'
 link_to_contents_document = "[Contents](contents.md)"
-table_start = '<table><thead><tr><th colspan="2">Keywords In Context Index</th></thead><tbody><tr><td>'
+table_start = '<table><thead><tr><th colspan="2">Keyword In Context Index</th></thead><tbody><tr><td>'
 table_cell = '</td><td>'
 table_row = '</td></tr><tr><td align="right">'
 table_end = '</tr></tbody></table>'
@@ -14,8 +14,8 @@ words_to_exclude = [
   "a", "and", "in", "is", "of", "on", "or", "for", "the", "with" 
 ]
 
-puts page_heading
 puts link_to_contents_document
+puts page_heading
 puts table_start
 File.foreach("docs/contents.md") { |line| 
   matches = line.match(extract_text_between_square_brackets)

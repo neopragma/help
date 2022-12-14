@@ -1,6 +1,6 @@
-# Keyword In Context Index
 [Contents](contents.md)
-<table><thead><tr><th colspan="2">Keywords In Context Index</th></thead><tbody><tr><td>
+# Help KWIC Index
+<table><thead><tr><th colspan="2">Keyword In Context Index</th></thead><tbody><tr><td>
 </td></tr><tr><td align="right"></td><td><a href="osx.md#ds_store">.DS_Store</a>  
 </td></tr><tr><td align="right">Remove</td><td><a href="osx.md#remove-ds_store-files-recursively">.DS_Store</a>  files recursively
 </td></tr><tr><td align="right">Remove all</td><td><a href="osx.md#remove-all-ds_store-files-system-wide">.DS_Store</a>  files system-wide
