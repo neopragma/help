@@ -10,7 +10,7 @@ table_row = '</td></tr><tr><td align="right">'
 table_end = '</tr></tbody></table>'
 sort_table = []
 words_to_exclude = [
-  "a", "and", "in", "of", "or", "for", "with" 
+  "a", "and", "in", "is", "of", "on", "or", "for", "the", "with" 
 ]
 
 puts page_heading
@@ -23,7 +23,7 @@ File.foreach("docs/contents.md") { |line|
     kwic_entry_left = []
     kwic_entry_right = []
     words.each_with_index() { |word,ix|
-      unless words_to_exclude.include? word 
+      unless words_to_exclude.include? word.downcase 
         kwic_entry_left << words[0..ix-1].join(' ') unless ix == 0
         kwic_entry_right << "<a href=\"#{link_text}\">#{word}</a> "
         kwic_entry_right << words[ix+1..words.length-1] unless ix == words.length

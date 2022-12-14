@@ -116,10 +116,6 @@
 </td></tr><tr><td align="right">PostgreSQL</td><td><a href="linux-debian.md#postgresql-install-on-ubuntu">install</a>  on Ubuntu
 </td></tr><tr><td align="right">ULauncher</td><td><a href="linux-debian.md#ulauncher-install-on-ubuntu">install</a>  on Ubuntu
 </td></tr><tr><td align="right">rvm</td><td><a href="#rvm-install-gets-permission-denied-errors">install</a>  gets permission denied errors
-</td></tr><tr><td align="right">File</td><td><a href="osx.md#file-is-in-use">is</a>  in use by macos and cannot be opened
-</td></tr><tr><td align="right">NTFS filesystem</td><td><a href="linux-debian.md#ntfs-filesystem-is-read-only-ubuntu">is</a>  read-only Ubuntu
-</td></tr><tr><td align="right">NTFS filesystem</td><td><a href="osx.md#ntfs-filesystem-readonly">is</a>  read-only
-</td></tr><tr><td align="right">Yum lock</td><td><a href="#yum-lock-is-held">is</a>  held by another process
 </td></tr><tr><td align="right">Equivalent of</td><td><a href="#equivalent-of-kill-command">kill</a>  command
 </td></tr><tr><td align="right"></td><td><a href="kwic-index.md">KWIC</a>  Index
 </td></tr><tr><td align="right">Boot to command</td><td><a href="linux-debian.md#boot-to-command-line">line</a>  
@@ -150,11 +146,6 @@
 </td></tr><tr><td align="right">Format USB stick</td><td><a href="linux-debian.md#format-usb-stick-ntfs-for-ubuntu">NTFS</a>  for Ubuntu
 </td></tr><tr><td align="right"></td><td><a href="#nuget-executable-not-found">Nuget</a>  executable not found
 </td></tr><tr><td align="right"></td><td><a href="#nunit-tests-not-discovered">NUnit</a>  tests not discovered
-</td></tr><tr><td align="right">Disable writing DS_Store files</td><td><a href="osx.md#disable-writing-ds_store-files-on-network-volumes">on</a>  network volumes
-</td></tr><tr><td align="right">Fusion 10 does not start correctly</td><td><a href="#fusion-10-does-not-start-correctly-on-osx-1012">on</a>  OSX 10.12
-</td></tr><tr><td align="right">PostgreSQL install</td><td><a href="linux-debian.md#postgresql-install-on-ubuntu">on</a>  Ubuntu
-</td></tr><tr><td align="right">ULauncher install</td><td><a href="linux-debian.md#ulauncher-install-on-ubuntu">on</a>  Ubuntu
-</td></tr><tr><td align="right">Wired networking disabled</td><td><a href="linux-debian.md#wired-networking-disabled-on-boot">on</a>  boot
 </td></tr><tr><td align="right"></td><td><a href="#command-line-elevated">Open</a>  command line elevated
 </td></tr><tr><td align="right">File is in use by macos and cannot be</td><td><a href="osx.md#file-is-in-use">opened</a>  
 </td></tr><tr><td align="right"></td><td><a href="osx.md">OSX</a>  
@@ -210,8 +201,6 @@
 </td></tr><tr><td align="right">Deactivate</td><td><a href="linux-debian.md#deactivate-suspend">suspend,</a>  hibernate, and hybrid-suspend
 </td></tr><tr><td align="right">Remove all .DS_Store files</td><td><a href="osx.md#remove-all-ds_store-files-system-wide">system-wide</a>  
 </td></tr><tr><td align="right">NUnit</td><td><a href="#nunit-tests-not-discovered">tests</a>  not discovered
-</td></tr><tr><td align="right">Determine</td><td><a href="linux-debian.md#determine-the-types-of-filesystems">the</a>  types of filesystems
-</td></tr><tr><td align="right">Determine</td><td><a href="linux-debian.md#determine-the-ubuntu-version">the</a>  Ubuntu version
 </td></tr><tr><td align="right">disable screen</td><td><a href="gnome.md#disable-screen-timeout">timeout</a>  
 </td></tr><tr><td align="right">Add divider</td><td><a href="osx.md#add-divider-to-dock">to</a>  Dock
 </td></tr><tr><td align="right">Boot</td><td><a href="linux-debian.md#boot-to-command-line">to</a>  command line
