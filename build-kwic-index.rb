@@ -4,6 +4,7 @@ extract_link_text = /\((.*?)\)/
 left_column = []
 right_column =  []
 page_heading = '# Keyword In Context Index'
+link_to_contents_document = "[Contents](contents.md)"
 table_start = '<table><thead><tr><th colspan="2">Keywords In Context Index</th></thead><tbody><tr><td>'
 table_cell = '</td><td>'
 table_row = '</td></tr><tr><td align="right">'
@@ -14,6 +15,7 @@ words_to_exclude = [
 ]
 
 puts page_heading
+puts link_to_contents_document
 puts table_start
 File.foreach("docs/contents.md") { |line| 
   matches = line.match(extract_text_between_square_brackets)
