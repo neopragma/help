@@ -6,7 +6,7 @@ right_column =  []
 page_heading = '# Keyword In Context Index'
 table_start = '<table><thead><tr><th colspan="2">Keywords In Context Index</th></thead><tbody><tr><td>'
 table_cell = '</td><td>'
-table_row = '</td></tr><tr><td>'
+table_row = '</td></tr><tr><td align="right">'
 table_end = '</tr></tbody></table>'
 
 puts page_heading
