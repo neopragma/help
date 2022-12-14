@@ -5,8 +5,6 @@
 </td></tr><tr><td align="right">Remove all</td><td><a href="osx.md#remove-all-ds_store-files-system-wide">.DS_Store</a>  files system-wide
 </td></tr><tr><td align="right">Fusion</td><td><a href="#fusion-10-does-not-start-correctly-on-osx-1012">10</a>  does not start correctly on OSX 10.12
 </td></tr><tr><td align="right">Fusion 10 does not start correctly on OSX</td><td><a href="#fusion-10-does-not-start-correctly-on-osx-1012">10.12</a>  
-</td></tr><tr><td align="right">Encountered</td><td><a href="linux-debian.md#encountered-a-section-with-no-package-header">a</a>  section with no package header
-</td></tr><tr><td align="right">Make an app out of</td><td><a href="osx.md#make-an-app-out-of-a-shell-script">a</a>  shell script
 </td></tr><tr><td align="right"></td><td><a href="#access-linux-files-from-windows">Access</a>  Linux files from Windows
 </td></tr><tr><td align="right"></td><td><a href="#access-windows-files-from-linux">Access</a>  Windows files from Linux
 </td></tr><tr><td align="right">personal</td><td><a href="git.md#personal-access-token">access</a>  token
@@ -14,12 +12,6 @@
 </td></tr><tr><td align="right">Delete</td><td><a href="#delete-all-unapproved-comments">all</a>  unapproved comments
 </td></tr><tr><td align="right">Remove</td><td><a href="osx.md#remove-all-ds_store-files-system-wide">all</a>  .DS_Store files system-wide
 </td></tr><tr><td align="right">Make</td><td><a href="osx.md#make-an-app-out-of-a-shell-script">an</a>  app out of a shell script
-</td></tr><tr><td align="right">Deactivate suspend, hibernate,</td><td><a href="linux-debian.md#deactivate-suspend">and</a>  hybrid-suspend
-</td></tr><tr><td align="right">File is in use by macos</td><td><a href="osx.md#file-is-in-use">and</a>  cannot be opened
-</td></tr><tr><td align="right">Git</td><td><a href="git.md">and</a>  related tools and services
-</td></tr><tr><td align="right">Git and related tools</td><td><a href="git.md">and</a>  services
-</td></tr><tr><td align="right">Linux</td><td><a href="linux-unix.md">and</a>  Unix: General
-</td></tr><tr><td align="right">Linux: Debian</td><td><a href="linux-debian.md">and</a>  derivatives
 </td></tr><tr><td align="right">Yum lock is held by</td><td><a href="#yum-lock-is-held">another</a>  process
 </td></tr><tr><td align="right">Make an</td><td><a href="osx.md#make-an-app-out-of-a-shell-script">app</a>  out of a shell script
 </td></tr><tr><td align="right"></td><td><a href="linux-debian.md#application-menu-display-problem">Application</a>  menu display problem
@@ -94,11 +86,6 @@
 </td></tr><tr><td align="right">NTFS</td><td><a href="linux-debian.md#ntfs-filesystem-is-read-only-ubuntu">filesystem</a>  is read-only Ubuntu
 </td></tr><tr><td align="right">NTFS</td><td><a href="osx.md#ntfs-filesystem-readonly">filesystem</a>  is read-only
 </td></tr><tr><td align="right">Determine the types of</td><td><a href="linux-debian.md#determine-the-types-of-filesystems">filesystems</a>  
-</td></tr><tr><td align="right">Format USB stick NTFS</td><td><a href="linux-debian.md#format-usb-stick-ntfs-for-ubuntu">for</a>  Ubuntu
-</td></tr><tr><td align="right">HP printer drivers</td><td><a href="#hp-printer-drivers-for-windows">for</a>  Windows
-</td></tr><tr><td align="right">HP printer drivers</td><td><a href="osx.md#hp-printer-drivers-for-osx">for</a>  OSX
-</td></tr><tr><td align="right">Windows Subsystem</td><td><a href="#windows-subsystem-for-linux">for</a>  Linux
-</td></tr><tr><td align="right">gnomekeyring</td><td><a href="gnome.md#gnomekeyring-for-github">for</a>  github
 </td></tr><tr><td align="right"></td><td><a href="linux-debian.md#format-usb-stick-ntfs-for-ubuntu">Format</a>  USB stick NTFS for Ubuntu
 </td></tr><tr><td align="right">Nuget executable not</td><td><a href="#nuget-executable-not-found">found</a>  
 </td></tr><tr><td align="right">Access Linux files</td><td><a href="#access-linux-files-from-windows">from</a>  Windows
@@ -125,8 +112,6 @@
 </td></tr><tr><td align="right"></td><td><a href="git.md#hprof-file-prevents-push">hprof</a>  file prevents push
 </td></tr><tr><td align="right">Deactivate suspend, hibernate, and</td><td><a href="linux-debian.md#deactivate-suspend">hybrid-suspend</a>  
 </td></tr><tr><td align="right">Replace string recursively</td><td><a href="linux-unix.md#replace-string-recursively-ignore-hidden-files">ignore</a>  hidden files
-</td></tr><tr><td align="right">File is</td><td><a href="osx.md#file-is-in-use">in</a>  use by macos and cannot be opened
-</td></tr><tr><td align="right">Replace strings</td><td><a href="osx.md#replace-strings-in-files-recursively">in</a>  files recursively
 </td></tr><tr><td align="right">KWIC</td><td><a href="kwic-index.md">Index</a>  
 </td></tr><tr><td align="right">PostgreSQL</td><td><a href="linux-debian.md#postgresql-install-on-ubuntu">install</a>  on Ubuntu
 </td></tr><tr><td align="right">ULauncher</td><td><a href="linux-debian.md#ulauncher-install-on-ubuntu">install</a>  on Ubuntu
@@ -165,10 +150,6 @@
 </td></tr><tr><td align="right">Format USB stick</td><td><a href="linux-debian.md#format-usb-stick-ntfs-for-ubuntu">NTFS</a>  for Ubuntu
 </td></tr><tr><td align="right"></td><td><a href="#nuget-executable-not-found">Nuget</a>  executable not found
 </td></tr><tr><td align="right"></td><td><a href="#nunit-tests-not-discovered">NUnit</a>  tests not discovered
-</td></tr><tr><td align="right">Determine the types</td><td><a href="linux-debian.md#determine-the-types-of-filesystems">of</a>  filesystems
-</td></tr><tr><td align="right">Equivalent</td><td><a href="#equivalent-of-kill-command">of</a>  kill command
-</td></tr><tr><td align="right">Equivalent</td><td><a href="#equivalent-of-touch-command">of</a>  touch command
-</td></tr><tr><td align="right">Make an app out</td><td><a href="osx.md#make-an-app-out-of-a-shell-script">of</a>  a shell script
 </td></tr><tr><td align="right">Disable writing DS_Store files</td><td><a href="osx.md#disable-writing-ds_store-files-on-network-volumes">on</a>  network volumes
 </td></tr><tr><td align="right">Fusion 10 does not start correctly</td><td><a href="#fusion-10-does-not-start-correctly-on-osx-1012">on</a>  OSX 10.12
 </td></tr><tr><td align="right">PostgreSQL install</td><td><a href="linux-debian.md#postgresql-install-on-ubuntu">on</a>  Ubuntu
@@ -262,9 +243,6 @@
 </td></tr><tr><td align="right">Access Linux files from</td><td><a href="#access-linux-files-from-windows">Windows</a>  
 </td></tr><tr><td align="right">HP printer drivers for</td><td><a href="#hp-printer-drivers-for-windows">Windows</a>  
 </td></tr><tr><td align="right"></td><td><a href="linux-debian.md#wired-networking-disabled-on-boot">Wired</a>  networking disabled on boot
-</td></tr><tr><td align="right">Encountered a section</td><td><a href="linux-debian.md#encountered-a-section-with-no-package-header">with</a>  no package header
-</td></tr><tr><td align="right">Problem</td><td><a href="linux-debian.md#package-list-corrupted">with</a>  MergeList...
-</td></tr><tr><td align="right">recompile</td><td><a href="gradle.md#recompile-with-xlint">with</a>  xlint
 </td></tr><tr><td align="right"></td><td><a href="#wordpress">Wordpress</a>  
 </td></tr><tr><td align="right">Disable</td><td><a href="osx.md#disable-writing-ds_store-files-on-network-volumes">writing</a>  DS_Store files on network volumes
 </td></tr><tr><td align="right"></td><td><a href="#wrong-screen-resolution">Wrong</a>  screen resolution
