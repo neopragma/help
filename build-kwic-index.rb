@@ -8,6 +8,7 @@ table_start = '<table><thead><tr><th colspan="2">Keywords In Context Index</th><
 table_cell = '</td><td>'
 table_row = '</td></tr><tr><td align="right">'
 table_end = '</tr></tbody></table>'
+sort_table = []
 
 puts page_heading
 puts table_start
@@ -24,14 +25,22 @@ File.foreach("docs/contents.md") { |line|
         kwic_entry_right << words[ix+1..words.length-1] unless ix == words.length
         left_column << "#{kwic_entry_left.join(' ')}"
         right_column << "#{kwic_entry_right.join(' ')}"
+
+        sort_table << [ word, kwic_entry_left, kwic_entry_right ] 
+
         kwic_entry_left = []
         kwic_entry_right = []
     }
   } unless matches == nil
 }
 
-left_column.each_with_index() { |left_entry, ix|
-puts "#{table_row}#{left_entry}#{table_cell}#{right_column[ix]}"
+
+sort_table.sort.each() { |sorted_entry|
+  puts "#{table_row}#{sorted_entry[1]}#{table_cell}#{sorted_entry[2]}"
 }
+
+#left_column.each_with_index() { |left_entry, ix|
+#  puts "#{table_row}#{left_entry}#{table_cell}#{right_column[ix]}"
+#}
 
 puts table_end 
