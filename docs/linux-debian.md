@@ -19,6 +19,8 @@
 * [Format USB stick NTFS for Ubuntu](#format-usb-stick-ntfs-for-ubuntu)
 * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
 * [PostgreSQL install on Ubuntu](#postgresql-install-on-ubuntu)
+* [rvm](#rvm)
+    * [rvm install gets permission denied errors](#rvm-install-gets-permission-denied-errors)
 * [ULauncher install on Ubuntu](#ulauncher-install-on-ubuntu)
 * [Wired networking disabled on boot](#wired-networking-disabled-on-boot)
 
@@ -268,6 +270,14 @@ sudo cp /etc/postgresql/*/main/pg_hba.conf ./pg_hba.conf.orig
 sudo cp ./pg_hba.conf /etc/postgresql/*/main
 sudo sed -i "/#listen_addresses/c\listen_addresses = \'*\'" /etc/postgresql/*/main/postgresql.conf
 ```
+
+### rvm
+
+#### rvm install gets permission denied errors
+
+This happens on Ubuntu using apt. Usually logging out and back in again clears it up.
+
+If that doesn't work, run ```sudo apt update``` and look for any errors (even if unrelated to rvm). Remove any offending entries from ```/etc/apt/sources.list``` and files under ```/etc/apt/sources.list.d```.
 
 ### ULauncher install on Ubuntu 
 
