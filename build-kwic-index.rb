@@ -26,7 +26,7 @@ File.foreach("docs/contents.md") { |line|
         left_column << "#{kwic_entry_left.join(' ')}"
         right_column << "#{kwic_entry_right.join(' ')}"
 
-        sort_table << [ word, left_column, right_column ] 
+        sort_table << [ word, "#{kwic_entry_left.join(' ')}", "#{kwic_entry_right.join(' ')}" ] 
 
         kwic_entry_left = []
         kwic_entry_right = []
