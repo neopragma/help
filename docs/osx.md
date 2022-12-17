@@ -13,6 +13,7 @@
 * [NTFS filesystem is read-only](#ntfs-filesystem-readonly)
 * [Make an app out of a shell script](#make-an-app-out-of-a-shell-script)
 * [Replace strings in files recursively](#replace-strings-in-files-recursively)
+* [Uninstall Go from Mac OS X](#uninstall-go)
 
 ## Add divider to Dock
 
@@ -102,3 +103,10 @@ export LC_CTYPE=C
 export LANG=C
 find . *.html -type f -print0 | xargs -0 sed -i "" 's/Software Craftsperson/Solution Developer/g'
 ```
+
+## Uninstall Go 
+
+- Remove file /etc/paths.d/go
+- Remove folder /usr/local/go
+- Remove references to */go/bin from $PATH
+- Save your Go sources if you need them, and then remove your workspace directory (typically $HOME/go)
