@@ -58,6 +58,7 @@
     * [NTFS filesystem is read-only](osx.md#ntfs-filesystem-readonly)
     * [Make an app out of a shell script](osx.md#make-an-app-out-of-a-shell-script)
     * [Replace strings in files recursively](osx.md#replace-strings-in-files-recursively)
+    * [Uninstall Go from Mac OS X](osx.md#uninstall-go)
 * [VMWare Fusion](vmware-fusion.md)
     * [Fusion 10 does not start correctly on OSX 10.12](vmware-fusion.md#fusion-10-does-not-start-correctly-on-osx-1012)
 * [Windows](windows.md)
