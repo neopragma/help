@@ -20,6 +20,7 @@
 </td></tr><tr><td align="right"></td><td><a href="linux-debian.md#apt">apt</a>  
 </td></tr><tr><td align="right">Status database</td><td><a href="linux-debian.md#status-database-area-locked">area</a>  locked...
 </td></tr><tr><td align="right">Enable ssh connection</td><td><a href="linux-debian.md#enable-ssh-connection-as-root">as</a>  root
+</td></tr><tr><td align="right">Printer definition will not go</td><td><a href="linux-debian.md#printer-definition-will-not-go-away">away</a>  
 </td></tr><tr><td align="right">File is in use by macos and cannot</td><td><a href="osx.md#file-is-in-use">be</a>  opened
 </td></tr><tr><td align="right">Disable</td><td><a href="linux-debian.md#apport-disable">bogus</a>  crash reports
 </td></tr><tr><td align="right"></td><td><a href="linux-debian.md#boot-to-command-line">Boot</a>  to command line
@@ -42,6 +43,7 @@
 </td></tr><tr><td align="right"></td><td><a href="linux-debian.md#deactivate-suspend">Deactivate</a>  suspend, hibernate, and hybrid-suspend
 </td></tr><tr><td align="right">Linux:</td><td><a href="linux-debian.md">Debian</a>  and derivatives
 </td></tr><tr><td align="right">change</td><td><a href="git.md#change-default-branch-to-main">default</a>  branch to main
+</td></tr><tr><td align="right">Printer</td><td><a href="linux-debian.md#printer-definition-will-not-go-away">definition</a>  will not go away
 </td></tr><tr><td align="right"></td><td><a href="wordpress.md#delete-all-unapproved-comments">Delete</a>  all unapproved comments
 </td></tr><tr><td align="right">Linux: Debian and</td><td><a href="linux-debian.md">derivatives</a>  
 </td></tr><tr><td align="right">Linux: RedHat and</td><td><a href="linux-redhat.md">derivatives</a>  
@@ -90,6 +92,7 @@
 </td></tr><tr><td align="right">Nuget executable not</td><td><a href="windows.md#nuget-executable-not-found">found</a>  
 </td></tr><tr><td align="right">Access Linux files</td><td><a href="windows.md#access-linux-files-from-windows">from</a>  Windows
 </td></tr><tr><td align="right">Access Windows files</td><td><a href="windows.md#access-windows-files-from-linux">from</a>  Linux
+</td></tr><tr><td align="right">Uninstall Go</td><td><a href="osx.md#uninstall-go">from</a>  Mac OS X
 </td></tr><tr><td align="right"></td><td><a href="vmware-fusion.md#fusion-10-does-not-start-correctly-on-osx-1012">Fusion</a>  10 does not start correctly on OSX 10.12
 </td></tr><tr><td align="right">VMWare</td><td><a href="vmware-fusion.md">Fusion</a>  
 </td></tr><tr><td align="right">Linux and Unix:</td><td><a href="linux-unix.md">General</a>  
@@ -99,6 +102,8 @@
 </td></tr><tr><td align="right">gnomekeyring for</td><td><a href="gnome.md#gnomekeyring-for-github">github</a>  
 </td></tr><tr><td align="right"></td><td><a href="gnome.md">Gnome</a>  desktop
 </td></tr><tr><td align="right"></td><td><a href="gnome.md#gnomekeyring-for-github">gnomekeyring</a>  for github
+</td></tr><tr><td align="right">Printer definition will not</td><td><a href="linux-debian.md#printer-definition-will-not-go-away">go</a>  away
+</td></tr><tr><td align="right">Uninstall</td><td><a href="osx.md#uninstall-go">Go</a>  from Mac OS X
 </td></tr><tr><td align="right"></td><td><a href="gradle.md">Gradle</a>  
 </td></tr><tr><td align="right">Encountered a section with no package</td><td><a href="linux-debian.md#encountered-a-section-with-no-package-header">header</a>  
 </td></tr><tr><td align="right">Yum lock is</td><td><a href="linux-redhat.md#yum-lock-is-held">held</a>  by another process
@@ -127,6 +132,7 @@
 </td></tr><tr><td align="right"></td><td><a href="git.md#list-your-repositories">list</a>  your repositories
 </td></tr><tr><td align="right">Yum</td><td><a href="linux-redhat.md#yum-lock-is-held">lock</a>  is held by another process
 </td></tr><tr><td align="right">Status database area</td><td><a href="linux-debian.md#status-database-area-locked">locked...</a>  
+</td></tr><tr><td align="right">Uninstall Go from</td><td><a href="osx.md#uninstall-go">Mac</a>  OS X
 </td></tr><tr><td align="right">File is in use by</td><td><a href="osx.md#file-is-in-use">macos</a>  and cannot be opened
 </td></tr><tr><td align="right">change default branch to</td><td><a href="git.md#change-default-branch-to-main">main</a>  
 </td></tr><tr><td align="right">rename master branch to</td><td><a href="git.md#rename-master-branch-to-main">main</a>  
@@ -140,6 +146,7 @@
 </td></tr><tr><td align="right">Fusion 10 does</td><td><a href="vmware-fusion.md#fusion-10-does-not-start-correctly-on-osx-1012">not</a>  start correctly on OSX 10.12
 </td></tr><tr><td align="right">NUnit tests</td><td><a href="windows.md#nunit-tests-not-discovered">not</a>  discovered
 </td></tr><tr><td align="right">Nuget executable</td><td><a href="windows.md#nuget-executable-not-found">not</a>  found
+</td></tr><tr><td align="right">Printer definition will</td><td><a href="linux-debian.md#printer-definition-will-not-go-away">not</a>  go away
 </td></tr><tr><td align="right"></td><td><a href="linux-debian.md#ntfs-filesystem-is-read-only-ubuntu">NTFS</a>  filesystem is read-only Ubuntu
 </td></tr><tr><td align="right"></td><td><a href="osx.md#ntfs-filesystem-readonly">NTFS</a>  filesystem is read-only
 </td></tr><tr><td align="right">Format USB stick</td><td><a href="linux-debian.md#format-usb-stick-ntfs-for-ubuntu">NTFS</a>  for Ubuntu
@@ -147,6 +154,7 @@
 </td></tr><tr><td align="right"></td><td><a href="windows.md#nunit-tests-not-discovered">NUnit</a>  tests not discovered
 </td></tr><tr><td align="right"></td><td><a href="windows.md#command-line-elevated">Open</a>  command line elevated
 </td></tr><tr><td align="right">File is in use by macos and cannot be</td><td><a href="osx.md#file-is-in-use">opened</a>  
+</td></tr><tr><td align="right">Uninstall Go from Mac</td><td><a href="osx.md#uninstall-go">OS</a>  X
 </td></tr><tr><td align="right"></td><td><a href="osx.md">OSX</a>  
 </td></tr><tr><td align="right">Fusion 10 does not start correctly on</td><td><a href="vmware-fusion.md#fusion-10-does-not-start-correctly-on-osx-1012">OSX</a>  10.12
 </td></tr><tr><td align="right">HP printer drivers for</td><td><a href="osx.md#hp-printer-drivers-for-osx">OSX</a>  
@@ -156,6 +164,7 @@
 </td></tr><tr><td align="right"></td><td><a href="git.md#personal-access-token">personal</a>  access token
 </td></tr><tr><td align="right"></td><td><a href="linux-debian.md#postgresql-install-on-ubuntu">PostgreSQL</a>  install on Ubuntu
 </td></tr><tr><td align="right">hprof file</td><td><a href="git.md#hprof-file-prevents-push">prevents</a>  push
+</td></tr><tr><td align="right"></td><td><a href="linux-debian.md#printer-definition-will-not-go-away">Printer</a>  definition will not go away
 </td></tr><tr><td align="right">HP</td><td><a href="linux-debian.md#hp-printer-drivers">printer</a>  drivers
 </td></tr><tr><td align="right">HP</td><td><a href="osx.md#hp-printer-drivers-for-osx">printer</a>  drivers for OSX
 </td></tr><tr><td align="right">HP</td><td><a href="windows.md#hp-printer-drivers-for-windows">printer</a>  drivers for Windows
@@ -215,6 +224,7 @@
 </td></tr><tr><td align="right">ULauncher install on</td><td><a href="linux-debian.md#ulauncher-install-on-ubuntu">Ubuntu</a>  
 </td></tr><tr><td align="right"></td><td><a href="linux-debian.md#ulauncher-install-on-ubuntu">ULauncher</a>  install on Ubuntu
 </td></tr><tr><td align="right">Delete all</td><td><a href="wordpress.md#delete-all-unapproved-comments">unapproved</a>  comments
+</td></tr><tr><td align="right"></td><td><a href="osx.md#uninstall-go">Uninstall</a>  Go from Mac OS X
 </td></tr><tr><td align="right">Linux and</td><td><a href="linux-unix.md">Unix:</a>  General
 </td></tr><tr><td align="right"></td><td><a href="gradle.md#update-gradle-from-command-line">update_gradle_from_command_line</a>  
 </td></tr><tr><td align="right">Format</td><td><a href="linux-debian.md#format-usb-stick-ntfs-for-ubuntu">USB</a>  stick NTFS for Ubuntu
@@ -223,6 +233,7 @@
 </td></tr><tr><td align="right"></td><td><a href="windows.md#visualstudio">VisualStudio</a>  
 </td></tr><tr><td align="right"></td><td><a href="vmware-fusion.md">VMWare</a>  Fusion
 </td></tr><tr><td align="right">Disable writing DS_Store files on network</td><td><a href="osx.md#disable-writing-ds_store-files-on-network-volumes">volumes</a>  
+</td></tr><tr><td align="right">Printer definition</td><td><a href="linux-debian.md#printer-definition-will-not-go-away">will</a>  not go away
 </td></tr><tr><td align="right"></td><td><a href="windows.md">Windows</a>  
 </td></tr><tr><td align="right"></td><td><a href="windows.md#windows-subsystem-for-linux">Windows</a>  Subsystem for Linux
 </td></tr><tr><td align="right">Access</td><td><a href="windows.md#access-windows-files-from-linux">Windows</a>  files from Linux
@@ -232,6 +243,7 @@
 </td></tr><tr><td align="right"></td><td><a href="wordpress.md">Wordpress</a>  
 </td></tr><tr><td align="right">Disable</td><td><a href="osx.md#disable-writing-ds_store-files-on-network-volumes">writing</a>  DS_Store files on network volumes
 </td></tr><tr><td align="right"></td><td><a href="x-windows.md#wrong-screen-resolution">Wrong</a>  screen resolution
+</td></tr><tr><td align="right">Uninstall Go from Mac OS</td><td><a href="osx.md#uninstall-go">X</a>  
 </td></tr><tr><td align="right"></td><td><a href="x-windows.md">X-windows</a>  
 </td></tr><tr><td align="right">recompile with</td><td><a href="gradle.md#recompile-with-xlint">xlint</a>  
 </td></tr><tr><td align="right">list</td><td><a href="git.md#list-your-repositories">your</a>  repositories

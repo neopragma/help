@@ -15,10 +15,11 @@
 * [dpkg](#dpkg)
     * [Status database area locked...](#status-database-area-locked)
 * [Enable ssh connection as root](#enable-ssh-connection-as-root)
-* [HP printer drivers](#hp-printer-drivers)
 * [Format USB stick NTFS for Ubuntu](#format-usb-stick-ntfs-for-ubuntu)
+* [HP printer drivers](#hp-printer-drivers)
 * [NTFS filesystem is read-only Ubuntu](#ntfs-filesystem-is-read-only-ubuntu)
 * [PostgreSQL install on Ubuntu](#postgresql-install-on-ubuntu)
+* [Printer definition will not go away](linux-debian.md#printer-definition-will-not-go-away)
 * [rvm](#rvm)
     * [rvm install gets permission denied errors](#rvm-install-gets-permission-denied-errors)
 * [ULauncher install on Ubuntu](#ulauncher-install-on-ubuntu)
@@ -223,20 +224,6 @@ Set root password if there isn't one
 sudo passwd root
 ```
 
-### HP printer drivers
-
-Find out what version of HPLIP is installed:
-
-```shell
-dpkg -l hplip
-```
-
-Install HPLIP
-
-```shell
-sudo apt-get install hplip
-```
-
 ### Format USB stick NTFS for Ubuntu
 
 Insert the USB stick. If it's a new one that's preformatted FAT32, Ubuntu will add it to the device list but not mount it.
@@ -251,6 +238,19 @@ sudo mkfs.ntfs /dev/sdb1
 
 Now the USB stick will be accessible with ```ntfs-3g```.
 
+### HP printer drivers
+
+Find out what version of HPLIP is installed:
+
+```shell
+dpkg -l hplip
+```
+
+Install HPLIP
+
+```shell
+sudo apt-get install hplip
+```
 
 ### NTFS filesystem is read-only Ubuntu
 
@@ -269,6 +269,20 @@ sudo cp /etc/postgresql/*/main/postgresql.conf ./postgresql.conf.orig
 sudo cp /etc/postgresql/*/main/pg_hba.conf ./pg_hba.conf.orig
 sudo cp ./pg_hba.conf /etc/postgresql/*/main
 sudo sed -i "/#listen_addresses/c\listen_addresses = \'*\'" /etc/postgresql/*/main/postgresql.conf
+```
+
+### Printer definition will not go away 
+
+Edit file /etc/cups/cups-browsed.conf and change the entry for BrowseRemoteProtocols to 'none', e.g.
+
+```shell
+BroseRemoteProtocols none
+``` 
+
+Save the file and restart the cups service:
+
+```shell
+service cups restart
 ```
 
 ### rvm
