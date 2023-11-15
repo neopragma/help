@@ -21,6 +21,9 @@ Under key ```AU```, add ```DWORD (32-bit) value``` with the name ```NoAutoBootWi
 
 Restart Windows.
 
+Additional references:
+* [4 Ways to Disable Windows 10 Automatic Restart](https://www.itechtics.com/disable-automatic-restart/)
+
 ### Equivalent of kill command
 
 Find out what command options are available:
