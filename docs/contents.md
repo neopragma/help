@@ -63,6 +63,7 @@
 * [VMWare Fusion](vmware-fusion.md)
     * [Fusion 10 does not start correctly on OSX 10.12](vmware-fusion.md#fusion-10-does-not-start-correctly-on-osx-1012)
 * [Windows](windows.md)
+    * [Disable Automatic Restart](windows.md#disable-automatic-restart)   
     * [Equivalent of kill command](windows.md#equivalent-of-kill-command)
     * [Equivalent of touch command](windows.md#equivalent-of-touch-command)
     * [HP printer drivers for Windows](windows.md#hp-printer-drivers-for-windows)
