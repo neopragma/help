@@ -1,7 +1,7 @@
 # Notes for Microsoft Windows 
 
 [Contents](contents.md) | [KWIC Index](kwic-index.md)
-
+* [Disable Automatic Restart](#disable-automatic-restart)
 * [Equivalent of kill command](#equivalent-of-kill-command)
 * [Equivalent of touch command](#equivalent-of-touch-command)
 * [HP printer drivers for Windows](#hp-printer-drivers-for-windows)
@@ -13,6 +13,13 @@
     * [Access Windows files from Linux](#access-windows-files-from-linux)
     * [Access Linux files from Windows](#access-linux-files-from-windows)
 
+### Disable automatic restart
+
+Edit the Registry. Navigate to ```Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows```. Add key ```WindowsUpdate```.  Under ```WindowsUpdate```, add key ```AU```. 
+
+Under key ```AU```, add ```DWORD (32-bit) value``` with the name ```NoAutoBootWithLoggedOnUsers```. Set the value to 1.
+
+Restart Windows.
 
 ### Equivalent of kill command
 
